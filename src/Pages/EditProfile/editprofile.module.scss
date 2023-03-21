@@ -5,6 +5,7 @@ $important_font_size: 1.5rem;
 $dull_color: #E6E6E8;
 $danger_color: #E53F3C;
 $secondary_color: #B3B3B6;
+$danger_btn_fill_color: #EB2525;
 // $seconday_btn_width: 13rem;
 // $seconday_btn_height: 3.8rem;
 
@@ -32,7 +33,6 @@ $secondary_color: #B3B3B6;
         height: auto;
         margin: 0;
         max-width: 1200px;
-        // padding: 0 10rem;
 
         .coverSection {
             width: 100%;
@@ -114,7 +114,7 @@ $secondary_color: #B3B3B6;
             .dashContent {
                 width: 75%;
                 background-color: white;
-                height: 200px;
+                min-height: calc(100vh - 16.75rem);
                 margin-left: 1.2rem;
                 filter: drop-shadow(0px 1px 7.5px rgba(25, 25, 25, 0.09));
 
@@ -146,6 +146,31 @@ $secondary_color: #B3B3B6;
                         border: 2px solid $secondary_color;
                         color: #52525B;
                     }
+                }
+
+                .updatePersonalDetailSection {
+                    width: 100%;
+                    padding: $content_padding;
+
+                    .contentRow {
+                        width: 100%;
+                        display: flex;
+                        margin: 1.25rem 0;
+                    }
+                }
+
+                .actionBtn {
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1.5rem;
+                    width: 18rem;
+                    height: 4.8rem;
+                    background-color: $danger_btn_fill_color;
+                    outline: none;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: $important_font_size;
+                    color: white;
                 }
             }
         }
