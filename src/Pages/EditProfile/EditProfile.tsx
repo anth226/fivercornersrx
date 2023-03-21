@@ -7,19 +7,16 @@ import { ReactComponent as MyCaseIcon } from '../../assets/icons/caseicon.svg';
 import { ReactComponent as OrderHistoryIcon } from '../../assets/icons/historyicon.svg';
 import { ReactComponent as BillingDetailIcon } from '../../assets/icons/billingdetailicon.svg';
 import { ReactComponent as SecurityIcon } from '../../assets/icons/securityicon.svg';
+import UserAvatar from '../../Components/UserAvatar/UserAvatar';
 
-const EditProfile = () => {
+const EditProfile: React.FC = () => {
     return (<div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
             <div className={styles.coverSection}>
                 <div className={styles.coverImageContainer}>
                 </div>
                 <div className={styles.coverContentContainer}>
-                    <img src={ProfileImage} alt="user_profile_image" />
-                    <div className={styles.profileDetails}>
-                        <p className={styles.userName}>William Smith</p>
-                        <p className={styles.userEmail}>email@example.com</p>
-                    </div>
+                    <UserAvatar image={ProfileImage} width="6.5rem" height="6.5rem" />
                 </div>
             </div>
 
@@ -52,7 +49,19 @@ const EditProfile = () => {
                     </div>
                 </div>
                 <div className={styles.dashContent}>
-
+                    <div className={styles.dashboardHeader}>
+                        <p className={styles.headText}>Profile Details</p>
+                        <p className={styles.primaryText}>You have full control to manage your own account setting.</p>
+                    </div>
+                    <div className={styles.updateProfilePictureSection}>
+                        <div className={styles.leftSide}>
+                            <UserAvatar primaryText="Your avatar" secondaryText="PNG or JPG no bigger than 800px wide and tall." image={ProfileImage} width="6.5rem" height="6.5rem" />
+                        </div>
+                        <div className={styles.rightSide}>
+                            <button className={styles.btnSecondary}>Change Image</button>
+                            <button className={styles.btnDanger}> Remove</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
