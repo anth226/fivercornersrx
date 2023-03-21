@@ -1,3 +1,23 @@
+$main_background_color: #F8FAFC;
+$content_padding: 1.5rem 1.75rem;
+$basic_font_size: 1.2rem;
+$important_font_size: 1.5rem;
+$dull_color: #E6E6E8;
+$danger_color: #E53F3C;
+$secondary_color: #B3B3B6;
+// $seconday_btn_width: 13rem;
+// $seconday_btn_height: 3.8rem;
+
+.headText {
+    font-size: $important_font_size;
+    font-weight: 500;
+}
+
+.primaryText {
+    font-size: $basic_font_size;
+    margin-top: 5px;
+}
+
 .pageContainer {
     width: 100%;
     height: auto;
@@ -12,6 +32,7 @@
         height: auto;
         margin: 0;
         max-width: 1200px;
+        // padding: 0 10rem;
 
         .coverSection {
             width: 100%;
@@ -32,11 +53,7 @@
                 padding-bottom: 1rem;
 
                 img {
-                    width: 6.5rem;
-                    height: 6.5rem;
-                    border-radius: 50%;
-                    object-fit: contain;
-                    border: 5px solid white;
+                    border: 2px solid white;
                     margin-top: -1.5rem;
                 }
 
@@ -46,7 +63,7 @@
 
                     .userName {
                         font-weight: 500;
-                        font-size: 1.25rem;
+                        font-size: $important_font_size;
                     }
                 }
 
@@ -54,14 +71,20 @@
         }
 
         .dashboardContainer {
-            margin-top: 1rem;
+            margin-top: 1.2rem;
             display: flex;
 
             .sidebarContainer {
                 background-color: white;
                 width: 25%;
-                padding: 1rem;
+                padding: $content_padding;
                 filter: drop-shadow(0px 1px 7.5px rgba(25, 25, 25, 0.09));
+
+                .sidebarHead {
+                    letter-spacing: 1px;
+                    font-size: 0.9rem;
+                    color: #B3B3B6;
+                }
 
                 .sidebarItem {
                     display: flex;
@@ -69,11 +92,13 @@
                     padding: 0.85rem 1rem;
                     border-radius: 5px;
                     margin: 0.5rem 0;
+                    cursor: pointer;
 
                     p {
                         margin-left: 1rem;
                         color: #52525B;
                         font-weight: 500;
+                        font-size: $basic_font_size;
                     }
                 }
 
@@ -90,9 +115,38 @@
                 width: 75%;
                 background-color: white;
                 height: 200px;
-                margin-left: 1rem;
+                margin-left: 1.2rem;
                 filter: drop-shadow(0px 1px 7.5px rgba(25, 25, 25, 0.09));
 
+                .dashboardHeader {
+                    padding: $content_padding;
+                    border-bottom: 1px solid $dull_color;
+                }
+
+                .updateProfilePictureSection {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: $content_padding;
+
+                    button {
+                        padding: 0.8rem 1.1rem;
+                        background-color: transparent;
+                        border-radius: 3px;
+                        margin: 0 0.8rem;
+                    }
+
+                    .btnDanger {
+                        border: 2px solid $danger_color;
+                        color: $danger_color;
+                    }
+
+                    .btnSecondary {
+                        border: 2px solid $secondary_color;
+                        color: #52525B;
+                    }
+                }
             }
         }
     }
