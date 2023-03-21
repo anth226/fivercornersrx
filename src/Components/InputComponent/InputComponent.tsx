@@ -1,10 +1,16 @@
 import * as React from 'react';
 import styles from "./inputcomponent.module.scss";
 
-const InputComponent = () => {
+type Props = {
+    type: string;
+    placeholder: string;
+    label: string;
+}
+
+const InputComponent: React.FC<Props> = ({ type, placeholder, label }) => {
     return (<div className={styles.inputContainer}>
-        <p className={styles.primaryText}>First name</p>
-        <input type="text" />
+        <p className={styles.primaryText}>{label}</p>
+        <input type={type} placeholder={placeholder} />
     </div>);
 }
 

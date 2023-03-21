@@ -67,12 +67,12 @@ const EditProfile: React.FC = () => {
                         <p className={styles.headText}>Personal Details</p>
                         <p className={styles.primaryText}>Edit your personal information and address.</p>
                         <div className={styles.contentRow}>
-                            <InputComponent />
-                            <InputComponent />
+                            <InputComponent type="text" placeholder='First Name' label="First Name" />
+                            <InputComponent type="text" placeholder='Last Name' label="Last Name" />
                         </div>
                         <div className={styles.contentRow}>
-                            <InputComponent />
-                            <InputComponent />
+                            <InputComponent type="number" placeholder='Phone No.' label="Phone No." />
+                            <InputComponent type="text" placeholder='Date of Birth' label="Date of Birth" />
                         </div>
                     </div>
                     <button className={styles.actionBtn}> Remove</button>
