@@ -8,6 +8,7 @@ import { ReactComponent as OrderHistoryIcon } from '../../assets/icons/historyic
 import { ReactComponent as BillingDetailIcon } from '../../assets/icons/billingdetailicon.svg';
 import { ReactComponent as SecurityIcon } from '../../assets/icons/securityicon.svg';
 import UserAvatar from '../../Components/UserAvatar/UserAvatar';
+import InputComponent from '../../Components/InputComponent/InputComponent';
 
 const EditProfile: React.FC = () => {
     return (<div className={styles.pageContainer}>
@@ -62,6 +63,19 @@ const EditProfile: React.FC = () => {
                             <button className={styles.btnDanger}> Remove</button>
                         </div>
                     </div>
+                    <div className={styles.updatePersonalDetailSection}>
+                        <p className={styles.headText}>Personal Details</p>
+                        <p className={styles.primaryText}>Edit your personal information and address.</p>
+                        <div className={styles.contentRow}>
+                            <InputComponent />
+                            <InputComponent />
+                        </div>
+                        <div className={styles.contentRow}>
+                            <InputComponent />
+                            <InputComponent />
+                        </div>
+                    </div>
+                    <button className={styles.actionBtn}> Remove</button>
                 </div>
             </div>
         </div>
