@@ -18,6 +18,7 @@ $danger_btn_fill_color: #EB2525;
     span {
         color: #2563EB;
         font-weight: 500;
+
         cursor: pointer;
     }
 }
@@ -42,12 +43,15 @@ $danger_btn_fill_color: #EB2525;
         margin: 0;
         max-width: 1200px;
 
-        .pageHead,
+        .pageHead {
+            margin: 0 auto;
+            text-align: center;
+        }
+
         .secondaryPageText {
             // padding: 0 2rem;
             max-width: 48rem;
             margin: 0 auto;
-            text-align: center;
         }
 
         .secondaryPageText {
@@ -72,7 +76,7 @@ $danger_btn_fill_color: #EB2525;
                     height: auto;
                     display: flex;
                     align-items: center;
-                    width: 50%;
+                    width: 100%;
 
                     .rememberMecheckbox {
                         width: 1.5rem;
@@ -85,12 +89,6 @@ $danger_btn_fill_color: #EB2525;
                     p {
                         margin-top: 1rem;
                     }
-                }
-
-                .forgotPassText {
-                    width: 50%;
-                    margin-top: 1rem;
-                    text-align: right;
                 }
             }
 
