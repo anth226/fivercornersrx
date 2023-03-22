@@ -1,0 +1,47 @@
+$main_background_color: #F8FAFC;
+$content_padding: 1.5rem 1.75rem;
+$basic_font_size: 1.2rem;
+$important_font_size: 1.5rem;
+$dull_color: #E6E6E8;
+$danger_color: #E53F3C;
+$secondary_color: #B3B3B6;
+$danger_btn_fill_color: #EB2525;
+
+.headText {
+    font-size: $important_font_size;
+    font-weight: 500;
+}
+
+.primaryText {
+    font-size: $basic_font_size;
+    margin-top: 5px;
+}
+
+.emailUpdateContainer,
+.passwordUpdateContainer {
+    padding: $content_padding;
+    border-bottom: 1px solid $dull_color;
+
+    .inputsContainer {
+        display: flex;
+        margin-top: 1rem;
+
+        div {
+            width: 50%;
+        }
+    }
+
+    .actionBtn {
+        // width: 18rem;
+        // height: 4.8rem;
+        padding: 1.25rem;
+        background-color: $danger_btn_fill_color;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        font-size: $important_font_size;
+        color: white;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+}
