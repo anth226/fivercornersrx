@@ -1,0 +1,74 @@
+$main_background_color: #F8FAFC;
+$content_padding: 1.5rem 1.75rem;
+$basic_font_size: 1.2rem;
+$important_font_size: 1.5rem;
+$dull_color: #E6E6E8;
+$danger_color: #E53F3C;
+$secondary_color: #B3B3B6;
+$danger_btn_fill_color: #EB2525;
+
+.headText {
+    font-size: $important_font_size;
+    font-weight: 500;
+}
+
+.primaryText {
+    font-size: $basic_font_size;
+    margin-top: 5px;
+}
+
+.updateProfilePictureSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $content_padding;
+    border-bottom: 1px solid $dull_color;
+
+    button {
+        padding: 0.8rem 1.1rem;
+        background-color: transparent;
+        border-radius: 3px;
+        margin: 0 0.8rem;
+
+        cursor: pointer;
+
+    }
+
+    .btnDanger {
+        border: 2px solid $danger_color;
+        color: $danger_color;
+    }
+
+    .btnSecondary {
+        border: 2px solid $secondary_color;
+        color: #52525B;
+    }
+}
+
+.updatePersonalDetailSection {
+    width: 100%;
+    padding: $content_padding;
+
+    .contentRow {
+        width: 100%;
+        display: flex;
+        margin: 1.25rem 0;
+    }
+}
+
+.actionBtn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    width: 18rem;
+    height: 4.8rem;
+    background-color: $danger_btn_fill_color;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: $important_font_size;
+    color: white;
+
+    cursor: pointer;
+}

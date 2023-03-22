@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from "./editprofile.module.scss";
+import styles from "./userdashboard.module.scss";
 import ProfileImage from "../../assets/images/profileuser.jpg"
 import { ReactComponent as ProfileIcon } from '../../assets/icons/profileicon.svg';
 import { ReactComponent as TreatementPlanIcon } from '../../assets/icons/treatementicon.svg';
@@ -9,8 +9,10 @@ import { ReactComponent as BillingDetailIcon } from '../../assets/icons/billingd
 import { ReactComponent as SecurityIcon } from '../../assets/icons/securityicon.svg';
 import UserAvatar from '../../Components/UserAvatar/UserAvatar';
 import InputComponent from '../../Components/InputComponent/InputComponent';
+import TreatmentPlan from '../../Components/TreatmentPlan/TreatmentPlan';
+import EditProfile from '../../Components/EditProfile/EditProfile';
 
-const EditProfile: React.FC = () => {
+const UserDashboard: React.FC = () => {
     return (<div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
             <div className={styles.coverSection}>
@@ -54,32 +56,12 @@ const EditProfile: React.FC = () => {
                         <p className={styles.headText}>Profile Details</p>
                         <p className={styles.primaryText}>You have full control to manage your own account setting.</p>
                     </div>
-                    <div className={styles.updateProfilePictureSection}>
-                        <div className={styles.leftSide}>
-                            <UserAvatar primaryText="Your avatar" secondaryText="PNG or JPG no bigger than 800px wide and tall." image={ProfileImage} width="6.5rem" height="6.5rem" />
-                        </div>
-                        <div className={styles.rightSide}>
-                            <button className={styles.btnSecondary}>Change Image</button>
-                            <button className={styles.btnDanger}> Remove</button>
-                        </div>
-                    </div>
-                    <div className={styles.updatePersonalDetailSection}>
-                        <p className={styles.headText}>Personal Details</p>
-                        <p className={styles.primaryText}>Edit your personal information and address.</p>
-                        <div className={styles.contentRow}>
-                            <InputComponent type="text" placeholder='First Name' label="First Name" />
-                            <InputComponent type="text" placeholder='Last Name' label="Last Name" />
-                        </div>
-                        <div className={styles.contentRow}>
-                            <InputComponent type="number" placeholder='Phone No.' label="Phone No." />
-                            <InputComponent type="text" placeholder='Date of Birth' label="Date of Birth" />
-                        </div>
-                    </div>
-                    <button className={styles.actionBtn}> Remove</button>
+                    <EditProfile />
+                    {/* <TreatmentPlan /> */}
                 </div>
             </div>
         </div>
     </div>);
 }
 
-export default EditProfile;
+export default UserDashboard;
