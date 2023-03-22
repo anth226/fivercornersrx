@@ -12,6 +12,7 @@ import InputComponent from '../../Components/InputComponent/InputComponent';
 import TreatmentPlan from '../../Components/TreatmentPlan/TreatmentPlan';
 import EditProfile from '../../Components/EditProfile/EditProfile';
 import MyCase from '../../Components/MyCase/MyCase';
+import OrderHistory from '../../Components/OrderHistory/OrderHistory';
 
 const UserDashboard: React.FC = () => {
     return (<div className={styles.pageContainer}>
@@ -55,7 +56,8 @@ const UserDashboard: React.FC = () => {
                 <div className={styles.dashContent}>
                     {/* <EditProfile /> */}
                     {/* <TreatmentPlan /> */}
-                    <MyCase />
+                    {/* <MyCase /> */}
+                    <OrderHistory />
                 </div>
             </div>
         </div>
