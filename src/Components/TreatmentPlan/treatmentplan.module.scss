@@ -1,0 +1,126 @@
+$main_background_color: #F8FAFC;
+$content_padding: 1.5rem 1.75rem;
+$basic_font_size: 1.2rem;
+$important_font_size: 2.4rem;
+$semi_important_font_size: 1.6rem;
+$dull_color: #E6E6E8;
+$head_text_color: #0F172A;
+$secondary_text_color: #64748B;
+$danger_color: #E53F3C;
+$danger_btn_fill_color: #EB2525;
+$img_bg_color: #EFF1F2;
+$success_color: #1E9432;
+
+.headText {
+    font-size: $important_font_size;
+    font-weight: 500;
+    color: $head_text_color;
+    font-weight: 600;
+}
+
+.primaryText {
+    font-size: $basic_font_size;
+    margin: 5px 0;
+}
+
+.success_Text {
+    color: $success_color;
+    font-weight: 500;
+}
+
+.treatmentPlanContentContainer {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    padding: $content_padding;
+
+    .medicineDetails {
+        width: 40%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $img_bg_color;
+        text-align: center;
+        padding: 1.7rem 2.9rem;
+        border-radius: 8px;
+
+        img {
+            width: 11.5rem;
+            height: 18.7rem;
+            object-fit: contain;
+        }
+
+        button {
+            width: 100%;
+            height: 4.8rem;
+            font-size: $semi_important_font_size;
+            color: white;
+            background-color: $danger_btn_fill_color;
+
+            outline: none;
+            border: none;
+            border-radius: 8px;
+
+            cursor: pointer;
+
+        }
+    }
+
+    .orderDetails {
+        width: 60%;
+        border: 1px solid $dull_color;
+        border-radius: 8px;
+        margin-left: 2rem;
+
+        .orderDetailsHeader {
+            width: 100%;
+            display: flex;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $dull_color;
+            padding: 1rem 0;
+            padding: $content_padding;
+
+            .primaryText {
+                font-size: calc($basic_font_size + 0.25rem);
+            }
+
+            button {
+                font-size: $semi_important_font_size;
+                border: 1px solid #87A2E1;
+                color: #2563EB;
+                font-weight: 500;
+                background-color: transparent;
+                border-radius: 2.25rem;
+                padding: 0.75rem 2.1rem;
+
+                cursor: pointer;
+            }
+        }
+
+        .orderDetailsContent {
+            width: 100%;
+            padding: $content_padding;
+
+            .contentRow {
+                width: auto;
+                display: flex;
+                justify-content: space-between;
+                margin: 0.9rem 0;
+
+                .primaryText {
+                    font-size: calc($basic_font_size + 0.25rem);
+
+                }
+
+                :nth-child(2) {
+                    font-weight: 500;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
