@@ -14,6 +14,7 @@ import EditProfile from '../../Components/EditProfile/EditProfile';
 import MyCase from '../../Components/MyCase/MyCase';
 import OrderHistory from '../../Components/OrderHistory/OrderHistory';
 import BillingDetails from '../../Components/BillingDetails/BillingDetails';
+import Security from '../../Components/Security/Security';
 
 const UserDashboard: React.FC = () => {
     return (<div className={styles.pageContainer}>
@@ -55,11 +56,12 @@ const UserDashboard: React.FC = () => {
                     </div>
                 </div>
                 <div className={styles.dashContent}>
-                    <EditProfile />
+                    {/* <EditProfile /> */}
                     {/* <TreatmentPlan /> */}
                     {/* <MyCase /> */}
                     {/* <OrderHistory /> */}
                     {/* <BillingDetails /> */}
+                    <Security />
                 </div>
             </div>
         </div>
