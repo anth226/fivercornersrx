@@ -1,0 +1,79 @@
+$main_background_color: #F8FAFC;
+$content_padding: 1.5rem 1.75rem;
+$basic_font_size: 1.2rem;
+$important_font_size: 1.5rem;
+$dull_color: #E6E6E8;
+$danger_color: #E53F3C;
+$secondary_color: #B3B3B6;
+$danger_btn_fill_color: #EB2525;
+
+.headText {
+    font-size: $important_font_size;
+    font-weight: 500;
+}
+
+.primaryText {
+    font-size: $basic_font_size;
+    margin-top: 5px;
+}
+
+.updateBillingsDetailSection {
+    width: 100%;
+    padding: $content_padding;
+
+    .contentRow {
+        width: 100%;
+        display: flex;
+        margin: 1.25rem 0;
+    }
+}
+
+.paymentMethodsContainer {
+    width: 100%;
+    padding: $content_padding;
+
+    .paymentMethod {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #2563EB;
+        border-radius: 1.2rem;
+        padding: 2rem;
+        margin: 1.6rem 0;
+
+        .leftSide {
+            img {
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: $basic_font_size;
+                margin: 0;
+                margin-top: 5px;
+            }
+        }
+
+        .rightSide {
+            button {
+                padding: 0.75rem 1.5rem;
+                background-color: transparent;
+                border-radius: 3px;
+                margin: 0 0.8rem;
+                font-size: $basic_font_size;
+                cursor: pointer;
+
+            }
+
+            .btnDanger {
+                border: 1px solid $danger_color;
+                color: $danger_color;
+            }
+
+            .btnSecondary {
+                border: 1px solid $secondary_color;
+                color: #52525B;
+            }
+        }
+
+    }
+}
