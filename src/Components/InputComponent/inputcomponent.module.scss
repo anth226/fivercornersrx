@@ -24,4 +24,9 @@ $basic_font_size: 1.2rem;
         padding: 0.5rem 1rem;
 
     }
+
+    .bigInput {
+        height: 5rem;
+        font-size: calc($basic_font_size + 0.2rem);
+    }
 }
