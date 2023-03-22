@@ -1,0 +1,23 @@
+$main_background_color: #F8FAFC;
+$content_padding: 1.5rem 1.75rem;
+$basic_font_size: 1.2rem;
+$important_font_size: 1.5rem;
+$dull_color: #E6E6E8;
+$danger_color: #E53F3C;
+$secondary_color: #B3B3B6;
+$danger_btn_fill_color: #EB2525;
+
+.dashboardHeader {
+    padding: $content_padding;
+    border-bottom: 1px solid $dull_color;
+}
+
+.headText {
+    font-size: $important_font_size;
+    font-weight: 500;
+}
+
+.primaryText {
+    font-size: $basic_font_size;
+    margin-top: 5px;
+}

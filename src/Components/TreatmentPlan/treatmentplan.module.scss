@@ -1,7 +1,7 @@
 $main_background_color: #F8FAFC;
 $content_padding: 1.5rem 1.75rem;
 $basic_font_size: 1.2rem;
-$important_font_size: 2.4rem;
+$important_font_size: 1.5rem;
 $semi_important_font_size: 1.6rem;
 $dull_color: #E6E6E8;
 $head_text_color: #0F172A;
@@ -14,8 +14,6 @@ $success_color: #1E9432;
 .headText {
     font-size: $important_font_size;
     font-weight: 500;
-    color: $head_text_color;
-    font-weight: 600;
 }
 
 .primaryText {
@@ -26,6 +24,17 @@ $success_color: #1E9432;
 .success_Text {
     color: $success_color;
     font-weight: 500;
+}
+
+.dashboardHeader {
+    padding: $content_padding;
+    border-bottom: 1px solid $dull_color;
+}
+
+.bigText {
+    font-size: 2.4rem;
+    color: $head_text_color;
+    font-weight: 600;
 }
 
 .treatmentPlanContentContainer {

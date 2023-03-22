@@ -17,6 +17,12 @@ $danger_btn_fill_color: #EB2525;
     margin-top: 5px;
 }
 
+.dashboardHeader {
+    padding: $content_padding;
+    border-bottom: 1px solid $dull_color;
+}
+
+
 .updateProfilePictureSection {
     width: 100%;
     display: flex;

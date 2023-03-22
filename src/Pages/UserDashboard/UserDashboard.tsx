@@ -11,6 +11,7 @@ import UserAvatar from '../../Components/UserAvatar/UserAvatar';
 import InputComponent from '../../Components/InputComponent/InputComponent';
 import TreatmentPlan from '../../Components/TreatmentPlan/TreatmentPlan';
 import EditProfile from '../../Components/EditProfile/EditProfile';
+import MyCase from '../../Components/MyCase/MyCase';
 
 const UserDashboard: React.FC = () => {
     return (<div className={styles.pageContainer}>
@@ -52,12 +53,9 @@ const UserDashboard: React.FC = () => {
                     </div>
                 </div>
                 <div className={styles.dashContent}>
-                    <div className={styles.dashboardHeader}>
-                        <p className={styles.headText}>Profile Details</p>
-                        <p className={styles.primaryText}>You have full control to manage your own account setting.</p>
-                    </div>
-                    <EditProfile />
+                    {/* <EditProfile /> */}
                     {/* <TreatmentPlan /> */}
+                    <MyCase />
                 </div>
             </div>
         </div>
