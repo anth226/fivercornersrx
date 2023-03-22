@@ -9,6 +9,7 @@ $danger_btn_fill_color: #EB2525;
 
 .dashboardHeader {
     padding: $content_padding;
+    padding-bottom: 0;
     border-bottom: 1px solid $dull_color;
 }
 
@@ -19,5 +20,4 @@ $danger_btn_fill_color: #EB2525;
 
 .primaryText {
     font-size: $basic_font_size;
-    margin-top: 5px;
 }
