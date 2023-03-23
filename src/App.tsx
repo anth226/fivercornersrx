@@ -11,9 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {/* <UserDashboard /> */}
-        {/* <SignIn /> */}
-        <SignUp />
+        <UserDashboard />
       </div>
     </BrowserRouter>
   );
