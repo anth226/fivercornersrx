@@ -1,0 +1,15 @@
+.formContainer {
+    width: 48rem;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+
+    padding: 2.4rem;
+    border-radius: 20px;
+
+    .rowContent {
+        display: flex;
+        justify-content: space-between;
+
+    }
+}

@@ -1,0 +1,52 @@
+$important_font_size: 1.5rem;
+$selected_step_color: #2563EB;
+$dull_color: #E6E6E8;
+
+.stepsContainer {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    .step {
+        width: auto;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .stepNoContainer {
+            width: 4rem;
+            height: 4rem;
+            background-color: $dull_color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                color: #52525B;
+                font-size: $important_font_size;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        p {
+            font-size: $important_font_size;
+            margin: 0;
+            padding: 0;
+            margin-left: 1rem;
+        }
+    }
+
+    .stepSelected {
+        .stepNoContainer {
+            background-color: $selected_step_color;
+
+            p {
+                color: white;
+            }
+        }
+    }
+}
