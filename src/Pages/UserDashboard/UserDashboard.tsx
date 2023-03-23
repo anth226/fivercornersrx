@@ -8,16 +8,10 @@ import { ReactComponent as OrderHistoryIcon } from '../../assets/icons/historyic
 import { ReactComponent as BillingDetailIcon } from '../../assets/icons/billingdetailicon.svg';
 import { ReactComponent as SecurityIcon } from '../../assets/icons/securityicon.svg';
 import UserAvatar from '../../Components/UserAvatar/UserAvatar';
-import InputComponent from '../../Components/InputComponent/InputComponent';
-import TreatmentPlan from '../../Components/TreatmentPlan/TreatmentPlan';
-import EditProfile from '../../Components/EditProfile/EditProfile';
-import MyCase from '../../Components/MyCase/MyCase';
-import OrderHistory from '../../Components/OrderHistory/OrderHistory';
-import BillingDetails from '../../Components/BillingDetails/BillingDetails';
-import Security from '../../Components/Security/Security';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
+import DashboardRoutes from '../../routes/DashboardRoutes';
 
 
 const UserDashboard: React.FC = () => {
@@ -80,14 +74,7 @@ const UserDashboard: React.FC = () => {
 
                 </div>
                 <div className={styles.dashContent}>
-                    <Routes>
-                        <Route path="/" element={<EditProfile />} />
-                        <Route path="/treatmentplan" element={<TreatmentPlan />} />
-                        <Route path="/mycase" element={<MyCase />} />
-                        <Route path="/orderhistory" element={<OrderHistory />} />
-                        <Route path="/billingdetails" element={<BillingDetails />} />
-                        <Route path="/security" element={<Security />} />
-                    </Routes>
+                    <DashboardRoutes />
                 </div>
             </div>
         </div>
