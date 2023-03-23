@@ -3,12 +3,12 @@ import InputComponent from '../../Components/InputComponent/InputComponent';
 import styles from "./signin.module.scss";
 import { Container, Form } from "react-bootstrap";
 import GoogleIcon from "../../assets/icons/google.svg"
+import FormHeader from '../../Components/FormHeader/FormHeader';
 
 const SignIn: React.FC = () => {
     return (<div className={styles.screenContainer}>
         <div className={styles.contentContainer}>
-            <p className={styles.pageHead}>Sign in to your account</p>
-            <p className={styles.primaryText + " " + styles.secondaryPageText}>No waiting rooms. No expensive doctors visits. Sign in to access your account.</p>
+            <FormHeader primary="Sign in to your account" secondary="No waiting rooms. No expensive doctors visits. Sign in to access your account." />
             <div className={styles.formContainer}>
                 <InputComponent bigInput={true} type="text" placeholder="Enter your email" label="Email Address" />
                 <br />
