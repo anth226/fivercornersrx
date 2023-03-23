@@ -3,12 +3,12 @@ import InputComponent from '../../Components/InputComponent/InputComponent';
 import styles from "./signup.module.scss";
 import { Container, Form } from "react-bootstrap";
 import GoogleIcon from "../../assets/icons/google.svg"
+import FormHeader from '../../Components/FormHeader/FormHeader';
 
 const SignUp: React.FC = () => {
     return (<div className={styles.screenContainer}>
         <div className={styles.contentContainer}>
-            <p className={styles.pageHead}>WELCOME TO FiveCornerRx!</p>
-            <p className={styles.primaryText + " " + styles.secondaryPageText}>No waiting rooms. No expensive doctors visits. Prescription treatments sent to your door, discreetly. This is the future of tele-medicine.</p>
+            <FormHeader primary="WELCOME TO FiveCornerRx!" secondary="No waiting rooms. No expensive doctors visits. Prescription treatments sent to your door, discreetly. This is the future of tele-medicine." />
             <div className={styles.formContainer}>
                 <InputComponent bigInput={true} type="text" placeholder="Enter your email" label="Email Address" />
                 <br />
