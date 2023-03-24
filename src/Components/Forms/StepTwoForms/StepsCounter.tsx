@@ -1,8 +1,12 @@
 import React from 'react'
-const StepsCounter = () => {
+
+interface Props {
+    step: string;
+}
+const StepsCounter: React.FC<Props> = ({ step }) => {
     return (<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <p>Question 1</p>
-        <p>1/17</p>
+        <p>Question {String(step)}</p>
+        <p><span style={{ color: "#2563EB" }}>{String(step)}</span>/17</p>
     </div>);
 }
 

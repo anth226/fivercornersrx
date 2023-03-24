@@ -10,5 +10,18 @@ $danger_btn_fill_color: #EB2525;
 .pageContainer {
     width: 100%;
     height: auto;
-    background-color: $main_background_color;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #F8FAFC;
+
+    .contentContainer {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        max-width: 1200px;
+        padding-bottom: 5rem;
+
+    }
 }
