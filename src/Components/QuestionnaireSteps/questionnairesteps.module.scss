@@ -3,11 +3,13 @@ $selected_step_color: #2563EB;
 $dull_color: #E6E6E8;
 
 .stepsContainer {
-    width: 100%;
+    width: 80%;
     height: auto;
 
     display: flex;
     justify-content: space-between;
+
+    margin: 3rem auto;
 
     .step {
         width: auto;

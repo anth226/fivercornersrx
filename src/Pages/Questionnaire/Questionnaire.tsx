@@ -19,16 +19,20 @@ const Questionnaire: React.FC = () => {
     const [step, setSteps] = React.useState(0);
     console.log("step", step)
     return (<div className={styles.pageContainer}>
-        <QuestionnaireSteps />
-        <FormHeader primary="Complete your profile" secondary="The information helps your doctor determine if you're eligible for treatment." />
-        <FormTemplate>
-            <StepsCounter />
-            <StepTwo content={questions[step]} />
-            <div className='rowContent'>
-                <ActionButton action={() => step > 0 && setSteps(step - 1)} type={BtnTypes.Back} text="Privious Question" />
-                <ActionButton action={() => step < 17 && setSteps(step + 1)} type={BtnTypes.Success} text="Next Question" />
-            </div>
-        </FormTemplate>
+        <div className={styles.contentContainer}>
+
+            <QuestionnaireSteps />
+            <FormHeader primary="Complete your profile" secondary="The information helps your doctor determine if you're eligible for treatment." />
+            <FormTemplate>
+                <StepsCounter step={String(step + 1)} />
+                <StepTwo content={questions[step]} />
+                <div className='rowContent'>
+                    <ActionButton action={() => step > 0 && setSteps(step - 1)} type={BtnTypes.Back} text="Privious Question" />
+                    <ActionButton action={() => step < 16 && setSteps(step + 1)} type={BtnTypes.Success} text="Next Question" />
+                </div>
+            </FormTemplate>
+        </div>
+
     </div>);
 }
 
