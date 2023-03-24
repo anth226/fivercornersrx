@@ -1,0 +1,24 @@
+$basic_font_size: 1.2rem;
+
+.question {
+    color: #0F172A;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 1rem;
+
+    margin: 1rem 0;
+}
+
+.rowContent {
+    width: 100%;
+    display: flex;
+
+    button:first-child {
+        margin-right: 1rem;
+    }
+}
+
+.primaryText {
+    font-size: $basic_font_size;
+    margin-top: 5px;
+}
