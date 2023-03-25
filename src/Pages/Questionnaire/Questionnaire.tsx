@@ -9,6 +9,7 @@ import ActionButton from '../../Components/ActionButton/ActionButton';
 import { BtnTypes } from '../../utils/util';
 import InfoStep from '../../Components/Forms/StepTwoForms/InfoStep';
 import SildenafilImage from "../../assets/images/bottle-design-Sildenafil.svg"
+import { completeAccountSteps } from '../../constants/quessionairesteps';
 
 
 const Questionnaire: React.FC = () => {
@@ -35,7 +36,7 @@ const Questionnaire: React.FC = () => {
 
     return (<div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
-            <QuestionnaireSteps setStep={setStep} step_no={step + 1} />
+            <QuestionnaireSteps steps={completeAccountSteps} setStep={setStep} step_no={step + 1} />
             <FormHeader primary={componentsArr[step].primary} secondary={componentsArr[step].secondary} />
             <FormTemplate>
                 {componentsArr[step].component}
