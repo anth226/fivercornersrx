@@ -6,83 +6,55 @@ import "./checkoutforms.scss"
 import { Form } from "react-bootstrap";
 import ActionButton from '../ActionButton/ActionButton';
 import { BtnTypes } from '../../utils/util';
-
 type Props = {
     step: number,
     setStep: React.Dispatch<React.SetStateAction<number>>
 }
-
-const ShippingForm: React.FC<Props> = ({ step, setStep }) => {
+const PaymentInformation: React.FC<Props> = ({ step, setStep }) => {
     return (<div className="form_container">
-        <h1 className="formHead">Shipping Information</h1>
+        <h1 className="formHead">Payment Information</h1>
         <Spacer />
         <Spacer />
+        <div className="contentRow">
+            <InputComponent type="text"
+                placeholder="Name on card"
+                label="Name on card"
+                bigInput={true} />
+        </div>
+        <Spacer />
+        <div className="contentRow">
+            <InputComponent type="text"
+                placeholder="0000-0000-0000-0000"
+                label="Card Number"
+                bigInput={true} />
+            <div className="contentSeperator"></div>
+            <InputComponent type="text"
+                placeholder="CVV"
+                label="CVV Number"
+                bigInput={true} />
+        </div>
+        <Spacer />
+        <div className="contentRow">
+            <InputComponent type="text"
+                placeholder="Select month"
+                label="Expiry Month"
+                bigInput={true} />
+            <div className="contentSeperator"></div>
+            <InputComponent type="text"
+                placeholder="Select year"
+                label="Expiry Year"
+                bigInput={true} />
+        </div>
 
-        <div className="contentRow">
-            <InputComponent type="text"
-                placeholder="Enter first name"
-                label="First Name"
-                bigInput={true} />
-            <div className="contentSeperator"></div>
-            <InputComponent type="text"
-                placeholder="Enter first name"
-                label="First Name"
-                bigInput={true} />
-        </div>
+        <Spacer />
+        <Spacer />
+        <Spacer />
+        <Spacer />
+        <Spacer />
+        <Spacer />
         <Spacer />
         <div className="contentRow">
-            <InputComponent type="text"
-                placeholder="DD/MM/YYYY"
-                label="Date of Birth"
-                bigInput={true} />
-            <div className="contentSeperator"></div>
-            <InputComponent type="number"
-                placeholder="Phone"
-                label="Phone"
-                bigInput={true} />
-        </div>
-        <Spacer />
-        <div className="contentRow">
-            <InputComponent type="text"
-                placeholder="Address"
-                label="Address"
-                bigInput={true} />
-        </div>
-        <Spacer />
-        <div className="contentRow">
-            <InputComponent type="text"
-                placeholder="State"
-                label="Select state"
-                bigInput={true} />
-            <div className="contentSeperator"></div>
-            <InputComponent type="text"
-                placeholder="Select city"
-                label="City"
-                bigInput={true} />
-        </div>
-        <Spacer />
-        <div className="contentRow">
-            <InputComponent type="text"
-                placeholder="Zip code"
-                label="ZIP"
-                bigInput={true} />
             <div className="emptySide"></div>
-            <div className="contentSeperator"></div>
-        </div>
-        <Spacer />
-        <Spacer />
-        <Spacer />
-        <Spacer />
-        <Spacer />
-        <Spacer />
-        <Spacer />
-        <div className="contentRow">
-            <Form.Check className="radioBtn"
-                label={"Billing same as shipping"}
-                type="radio"
-                name="question"
-                checked={true}
-            />
             <div className="btnContainer">
                 <ActionButton action={() => setStep(step + 1)} type={BtnTypes.Success} text="Next" />
             </div>
@@ -90,4 +62,4 @@ const ShippingForm: React.FC<Props> = ({ step, setStep }) => {
     </div>);
 }
 
-export default ShippingForm;
+export default PaymentInformation;

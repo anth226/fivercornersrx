@@ -12,12 +12,11 @@ type Props = {
     setStep: React.Dispatch<React.SetStateAction<number>>
 }
 
-const ShippingForm: React.FC<Props> = ({ step, setStep }) => {
+const BillingForm: React.FC<Props> = ({ step, setStep }) => {
     return (<div className="form_container">
-        <h1 className="formHead">Shipping Information</h1>
+        <h1 className="formHead">Billing Information</h1>
         <Spacer />
         <Spacer />
-
         <div className="contentRow">
             <InputComponent type="text"
                 placeholder="Enter first name"
@@ -27,18 +26,6 @@ const ShippingForm: React.FC<Props> = ({ step, setStep }) => {
             <InputComponent type="text"
                 placeholder="Enter first name"
                 label="First Name"
-                bigInput={true} />
-        </div>
-        <Spacer />
-        <div className="contentRow">
-            <InputComponent type="text"
-                placeholder="DD/MM/YYYY"
-                label="Date of Birth"
-                bigInput={true} />
-            <div className="contentSeperator"></div>
-            <InputComponent type="number"
-                placeholder="Phone"
-                label="Phone"
                 bigInput={true} />
         </div>
         <Spacer />
@@ -77,12 +64,7 @@ const ShippingForm: React.FC<Props> = ({ step, setStep }) => {
         <Spacer />
         <Spacer />
         <div className="contentRow">
-            <Form.Check className="radioBtn"
-                label={"Billing same as shipping"}
-                type="radio"
-                name="question"
-                checked={true}
-            />
+            <div className="emptySide"></div>
             <div className="btnContainer">
                 <ActionButton action={() => setStep(step + 1)} type={BtnTypes.Success} text="Next" />
             </div>
@@ -90,4 +72,4 @@ const ShippingForm: React.FC<Props> = ({ step, setStep }) => {
     </div>);
 }
 
-export default ShippingForm;
+export default BillingForm;

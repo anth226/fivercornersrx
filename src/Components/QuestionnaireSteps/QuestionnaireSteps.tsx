@@ -1,35 +1,14 @@
 import React, { Dispatch, SetStateAction } from 'react';
+import { stepTypes } from '../../constants/quessionairesteps';
 import styles from "./questionnairesteps.module.scss";
 
-interface steps {
-    step_no: number;
-    step_text: string;
-    current_step: boolean
-}
-
 type Props = {
+    steps: stepTypes[]
     step_no: number
     setStep: Dispatch<SetStateAction<number>>
 }
 
-const steps: steps[] = [{
-    step_no: 1,
-    step_text: 'Complete your profile',
-    current_step: true
-},
-{
-    step_no: 2,
-    step_text: 'Complete Health Questionnaire',
-    current_step: false
-},
-{
-    step_no: 3,
-    step_text: 'Treatment',
-    current_step: false
-}
-]
-
-const QuestionnaireSteps: React.FC<Props> = ({ step_no, setStep }) => {
+const QuestionnaireSteps: React.FC<Props> = ({ steps, step_no, setStep }) => {
     return (<div className={styles.stepsContainer}>
         {
             steps.map(step => {
