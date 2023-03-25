@@ -1,0 +1,40 @@
+$main_background_color: #F8FAFC;
+$content_padding: 1.5rem 1.75rem;
+$basic_font_size: 1.2rem;
+$important_font_size: 1.5rem;
+$dull_color: #E6E6E8;
+$danger_color: #E53F3C;
+$secondary_color: #B3B3B6;
+$danger_btn_fill_color: #EB2525;
+
+.pageContainer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #F8FAFC;
+
+    .contentContainer {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        max-width: 1200px;
+        padding-bottom: 5rem;
+
+        .formsContainer {
+            width: 100%;
+            display: flex;
+
+            .leftSide {
+                width: 25%;
+            }
+
+            .rightSide {
+                width: calc(75% - 5rem);
+                margin-left: 5rem;
+            }
+        }
+    }
+}

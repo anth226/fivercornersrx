@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import SignIn from './Pages/SignIn/SignIn';
 import SignUp from './Pages/SignUp/SignUp';
 import Questionnaire from './Pages/Questionnaire/Questionnaire';
+import BillingQuestionnaire from './Pages/BillingQuestionnaire/BillingQuestionnaire';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         {/* <UserDashboard /> */}
         {/* <SignIn /> */}
         {/* <SignUp /> */}
-        <Questionnaire />
+        {/* <Questionnaire /> */}
+        <BillingQuestionnaire />
       </div>
     </BrowserRouter>
   );
