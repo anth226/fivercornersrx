@@ -1,0 +1,89 @@
+$content_padding: 1.5rem 1.75rem;
+$basic_font_size: 1.2rem;
+$important_font_size: 1.5rem;
+$danger_color: #E53F3C;
+$secondary_color: #B3B3B6;
+$important_text_color: #0F172A;
+$content_padding: 1.5rem 1.75rem;
+
+.headText {
+    font-size: calc($important_font_size + 2px);
+    font-weight: 600;
+}
+
+.primaryText {
+    font-size: $basic_font_size;
+    margin-top: 5px;
+}
+
+.dullText {
+    color: #52525B;
+}
+
+.medicine_detail {
+    font-size: $important_font_size;
+    color: $important_text_color;
+}
+
+.productDetailsContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid #E6E6E8;
+    border-radius: 8px;
+    padding: $content_padding;
+
+    .primaryText,
+    .dullText,
+    .medicine_detail {
+        text-align: center;
+    }
+
+    .medicine_image {
+        width: 16.2rem;
+        height: 26.1rem;
+        object-fit: contain;
+        margin: 0 auto;
+        color: $important_text_color;
+    }
+
+    .pricingDetailsRow {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        :nth-child(2) {
+            color: $important_text_color;
+            font-weight: 500;
+        }
+
+        img {
+            width: 1.6rem;
+            height: 1.6rem;
+            object-fit: contain;
+        }
+    }
+
+    .extraDetailsRow {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 1.6rem;
+            height: 1.6rem;
+            object-fit: contain;
+        }
+
+        .lightText {
+            font-size: $basic_font_size;
+            margin: 0;
+
+            margin-left: 0.8rem;
+        }
+    }
+}

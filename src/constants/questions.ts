@@ -7,13 +7,19 @@ export enum QuestionTypes {
 }
 
 export interface questionType {
-    type: QuestionTypes,
+    type: QuestionTypes | null,
     question: string,
     description: string,
     options: string[]
 }
 
 export const questions: questionType[] = [
+    {
+        type: null,
+        question: "",
+        description: "",
+        options: []
+    },
     {
         type: QuestionTypes.CHECKS,
         question: "Are you seeking treatment for improved sexual activity?",

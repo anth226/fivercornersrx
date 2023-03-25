@@ -1,4 +1,5 @@
 $basic_font_size: 1.2rem;
+$important_font_size: 1.5rem;
 
 .question {
     color: #0F172A;
@@ -21,4 +22,9 @@ $basic_font_size: 1.2rem;
 .primaryText {
     font-size: $basic_font_size;
     margin-top: 5px;
+}
+
+.headText {
+    font-size: $important_font_size;
+    font-weight: 600;
 }
