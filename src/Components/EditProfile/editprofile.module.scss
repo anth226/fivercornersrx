@@ -60,6 +60,10 @@ $danger_btn_fill_color: #EB2525;
         width: 100%;
         display: flex;
         margin: 1.25rem 0;
+
+        .contentSeperator {
+            width: 2rem;
+        }
     }
 }
 

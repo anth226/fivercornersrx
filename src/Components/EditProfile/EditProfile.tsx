@@ -22,10 +22,12 @@ const EditProfile = () => {
             <p className={styles.primaryText}>Edit your personal information and address.</p>
             <div className={styles.contentRow}>
                 <InputComponent type="text" placeholder='First Name' label="First Name" />
+                <div className={styles.contentSeperator}></div>
                 <InputComponent type="text" placeholder='Last Name' label="Last Name" />
             </div>
             <div className={styles.contentRow}>
                 <InputComponent type="number" placeholder='Phone No.' label="Phone No." />
+                <div className={styles.contentSeperator}></div>
                 <InputComponent type="text" placeholder='Date of Birth' label="Date of Birth" />
             </div>
         </div>
