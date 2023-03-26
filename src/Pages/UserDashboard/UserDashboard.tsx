@@ -12,6 +12,7 @@ import UserAvatar from '../../Components/UserAvatar/UserAvatar';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 import DashboardRoutes from '../../routes/DashboardRoutes';
+import MainNavbar from '../../Components/Navbar/MainNavbar';
 
 
 const UserDashboard: React.FC = () => {
@@ -24,6 +25,10 @@ const UserDashboard: React.FC = () => {
 
     return (<div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
+            <div className="navBg">
+                <MainNavbar navType="dark" />
+            </div>
+
             <div className={styles.coverSection}>
                 <div className={styles.coverImageContainer}>
                 </div>

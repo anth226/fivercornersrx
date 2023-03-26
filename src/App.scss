@@ -5,5 +5,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
 
+.navBg {
+  width: 100%;
+  background: linear-gradient(-125deg, #32465e 0%, #1f2a39 96.65%, #151b23 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

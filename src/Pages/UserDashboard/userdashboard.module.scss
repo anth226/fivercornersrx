@@ -26,20 +26,25 @@ $danger_btn_fill_color: #EB2525;
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #F8FAFC;
+    background-color: $main_background_color;
 
     .contentContainer {
         width: 100%;
         height: auto;
         margin: 0;
         max-width: 1200px;
-        padding-bottom: 5rem;
+        // background-color: red;
 
+
+
+        // padding-bottom: 5rem;
         .coverSection {
+            margin-top: 8vh;
             width: 100%;
             height: 15rem;
             filter: drop-shadow(0px 1px 7.5px rgba(25, 25, 25, 0.09));
-            border-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
             overflow: hidden;
 
             .coverImageContainer {
@@ -121,7 +126,7 @@ $danger_btn_fill_color: #EB2525;
             .dashContent {
                 width: 75%;
                 background-color: white;
-                min-height: calc(100vh - 16.75rem);
+                min-height: calc(100vh - (18.5rem + 6vh));
                 margin-left: 1.5rem;
                 filter: drop-shadow(0px 1px 7.5px rgba(25, 25, 25, 0.09));
                 border-radius: 8px;
