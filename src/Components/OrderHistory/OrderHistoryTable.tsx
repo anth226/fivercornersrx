@@ -3,7 +3,7 @@ import styles from "./orderhistory.module.scss"
 
 const OrderHistoryTable = () => {
     return (
-        <Table className={styles.tableContainer} striped bordered hover>
+        <Table className={styles.tableContainer} responsive striped bordered hover>
             <thead className={styles.tableHead}>
                 <tr>
                     <th>Transaction ID</th>
