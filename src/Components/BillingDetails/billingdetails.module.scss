@@ -24,7 +24,10 @@ $danger_btn_fill_color: #EB2525;
     .contentRow {
         width: 100%;
         display: flex;
-        margin: 1.25rem 0;
+
+        .contentSeperator {
+            width: 2rem;
+        }
     }
 }
 
@@ -75,5 +78,26 @@ $danger_btn_fill_color: #EB2525;
             }
         }
 
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .updateBillingsDetailSection {
+        .contentRow {
+            flex-direction: column;
+        }
+    }
+
+    .paymentMethodsContainer {
+
+        .paymentMethod {
+            width: 100%;
+
+            .rightSide {
+                margin: auto 0;
+            }
+        }
     }
 }

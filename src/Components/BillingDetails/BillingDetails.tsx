@@ -4,18 +4,40 @@ import InputComponent from '../InputComponent/InputComponent';
 import styles from "./billingdetails.module.scss"
 import MasterCardIcon from '../../assets/icons/MasterCardicon.svg'
 import VisaIcon from '../../assets/icons/visaicon.svg'
+import Spacer from '../Spacer/Spacer';
+import { useMediaQuery } from 'react-responsive'
 
 const BillingDetails = () => {
+
+    const isSmallDevice = useMediaQuery({
+        query: '(max-width: 600px)'
+    })
+
     return (<div>
         <DashboardHeader heading='Billing Details' details='Manage your billing and payment information.' />
         <div className={styles.updateBillingsDetailSection}>
-            <div className={styles.contentRow}>
-                <InputComponent type="text" placeholder='Billing Adress' label="Billing Adress" />
-                <InputComponent type="text" placeholder='Country' label="Country" />
-            </div>
 
             <div className={styles.contentRow}>
+
+                <InputComponent type="text" placeholder='Billing Adress' label="Billing Adress" />
+                {
+                    isSmallDevice ? <Spacer /> : null
+                }
+                <div className={styles.contentSeperator}></div>
+                <InputComponent type="text" placeholder='Country' label="Country" />
+            </div>
+            {
+                isSmallDevice ? null : <Spacer />
+            }
+            <div className={styles.contentRow}>
+                {
+                    isSmallDevice ? <Spacer /> : null
+                }
                 <InputComponent type="text" placeholder='State' label="State" />
+                {
+                    isSmallDevice ? <Spacer /> : null
+                }
+                <div className={styles.contentSeperator}></div>
                 <InputComponent type="number" placeholder='ZIP Code' label="ZIP Code" />
 
             </div>

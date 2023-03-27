@@ -14,7 +14,6 @@ const Security = () => {
             <div className={styles.inputsContainer}>
                 <InputComponent type="text" placeholder="Enter new email" label="New email address" />
                 <div></div>
-
             </div>
             <button className={styles.actionBtn}> Update Email</button>
         </div>
