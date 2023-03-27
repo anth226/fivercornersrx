@@ -45,3 +45,15 @@ $danger_btn_fill_color: #EB2525;
         cursor: pointer;
     }
 }
+
+@media only screen and (max-width: 600px) {
+
+    .emailUpdateContainer,
+    .passwordUpdateContainer {
+        .inputsContainer {
+            div {
+                width: auto;
+            }
+        }
+    }
+}
