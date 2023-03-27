@@ -20,7 +20,10 @@ import { useMediaQuery } from 'react-responsive'
 const UserDashboard: React.FC = () => {
 
     const [showSidebar, setShowSidebar] = React.useState<boolean>(false)
-
+    React.useEffect(() => {
+        if (showSidebar) document.body.style.overflow = "hidden";
+        else document.body.style.overflow = "auto";
+    }, [showSidebar])
     const location = useLocation();
     console.log(location.pathname);
 
@@ -53,37 +56,37 @@ const UserDashboard: React.FC = () => {
                     }
 
                     <p className={styles.sidebarHead}>MANAGE PROFILE</p>
-                    <Link style={{ textDecoration: "none" }} to="/">
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/">
                         <div className={checkPath("/") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <ProfileIcon />
                             <p>Edit Profile</p>
                         </div>
                     </Link>
-                    <Link style={{ textDecoration: "none" }} to="/treatmentplan">
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/treatmentplan">
                         <div className={checkPath("/treatmentplan") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <TreatementPlanIcon />
                             <p>Treatement Plan</p>
                         </div>
                     </Link>
-                    <Link style={{ textDecoration: "none" }} to="/mycase">
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/mycase">
                         <div className={checkPath("/mycase") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <MyCaseIcon />
                             <p>My Case</p>
                         </div>
                     </Link>
-                    <Link style={{ textDecoration: "none" }} to="/orderhistory">
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/orderhistory">
                         <div className={checkPath("/orderhistory") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <OrderHistoryIcon />
                             <p>Order History</p>
                         </div>
                     </Link>
-                    <Link style={{ textDecoration: "none" }} to="/billingdetails">
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/billingdetails">
                         <div className={checkPath("/billingdetails") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <BillingDetailIcon />
                             <p>Billing Detail</p>
                         </div>
                     </Link>
-                    <Link style={{ textDecoration: "none" }} to="/security">
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/security">
                         <div className={checkPath("/security") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <SecurityIcon />
                             <p>Security</p>

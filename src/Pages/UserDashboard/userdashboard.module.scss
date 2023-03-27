@@ -125,7 +125,7 @@ $danger_btn_fill_color: #EB2525;
             .sidebarContainerMobile,
             .sidebarContainerMobileOpened {
                 width: 25rem;
-                height: calc(100vh - 8vh);
+                height: calc(100% - 8vh);
                 top: 8vh;
                 // left: -25rem;
                 transform: translateX(-25rem);
@@ -205,6 +205,8 @@ $danger_btn_fill_color: #EB2525;
                     width: 100%;
                     margin: 0;
                 }
+
+
             }
         }
     }
