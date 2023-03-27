@@ -1,5 +1,5 @@
 // import { BrowserRouter as Link } from 'react-router-dom';
-import React from "react";
+import React, { Dispatch } from "react";
 import "./navbar.scss";
 import logoLight from "../../assets/icons/logo.svg";
 import logoDark from "../../assets/icons/logoDark.svg";
@@ -12,20 +12,24 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import UsernameAvatar from '../../Components/UsernameAvatar/UsernameAvatar';
 
 type Props = {
-  navType: string
+  navType: string;
+  setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MainNavbar: React.FC<Props> = ({ navType }) => {
+const MainNavbar: React.FC<Props> = ({ navType, setShowSidebar }) => {
   return (
     <Navbar bg="" expand="lg" className="navbar">
       <Container fluid className="navbar-container">
+        <UsernameAvatar setShowSidebar={setShowSidebar} username="Wasiq Abdullah" />
         <Navbar.Brand href="#" >
+
           <img src={navType == "dark" ? logoLight : logoDark} alt="" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" className="navToggle" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Toggle aria-controls="navbarScroll" className={navType == "dark" ? "navToggleLight" : "navToggleDark"} />
+        <Navbar.Collapse id="navbarScroll" className={navType == 'dark' ? "navbarScrollLight" : "navbarScrollDark"}>
           <Nav
             className={navType == "dark" ? "me-auto my-2 my-lg-0 nav-conLight" : "me-auto my-2 my-lg-0 nav-conDark"}
             style={{ maxHeight: "100px" }}
