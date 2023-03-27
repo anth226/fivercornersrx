@@ -13,11 +13,20 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 import DashboardRoutes from '../../routes/DashboardRoutes';
 import MainNavbar from '../../Components/Navbar/MainNavbar';
+import CloseIcon from "../../assets/icons/close.png"
+import { useMediaQuery } from 'react-responsive'
 
 
 const UserDashboard: React.FC = () => {
+
+    const [showSidebar, setShowSidebar] = React.useState<boolean>(false)
+
     const location = useLocation();
     console.log(location.pathname);
+
+    const isSmallDevice = useMediaQuery({
+        query: '(max-width: 820px)'
+    })
 
     const checkPath = (path: string) => {
         return location.pathname == path ? true : false
@@ -26,7 +35,7 @@ const UserDashboard: React.FC = () => {
     return (<div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
             <div className="navBg">
-                <MainNavbar navType="dark" />
+                <MainNavbar setShowSidebar={setShowSidebar} navType="dark" />
             </div>
 
             <div className={styles.coverSection}>
@@ -38,7 +47,11 @@ const UserDashboard: React.FC = () => {
             </div>
 
             <div className={styles.dashboardContainer}>
-                <div className={styles.sidebarContainer}>
+                <div className={isSmallDevice ? !showSidebar ? styles.sidebarContainerMobile : styles.sidebarContainerMobileOpened : styles.sidebarContainer}>
+                    {
+                        isSmallDevice ? <img onClick={(prevState) => setShowSidebar(false)} className={styles.closeicon} src={CloseIcon} alt='close_icon' /> : null
+                    }
+
                     <p className={styles.sidebarHead}>MANAGE PROFILE</p>
                     <Link style={{ textDecoration: "none" }} to="/">
                         <div className={checkPath("/") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
