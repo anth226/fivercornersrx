@@ -133,3 +133,21 @@ $success_color: #1E9432;
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+
+    .treatmentPlanContentContainer {
+        flex-direction: column;
+
+        .medicineDetails,
+        .orderDetails {
+            width: 100%;
+            margin: 0;
+
+        }
+
+        .orderDetails {
+            margin-top: 1.5rem;
+        }
+    }
+}
