@@ -1,16 +1,23 @@
 export const PATH = {
-    EditProfile: '/',
-    TreatmentPlan: '/treatmentplan',
-    MyCase: '/mycase',
-    OrderHistory: '/orderhistory',
-    BillingDetails: '/billingdetails',
-    Security: '/security',
+    EditProfile: '/userdash/editprofile',
+    TreatmentPlan: '/userdash/treatmentplan',
+    MyCase: '/userdash/mycase',
+    OrderHistory: '/userdash/orderhistory',
+    BillingDetails: '/userdash/billingdetails',
+    Security: '/userdash/security',
+
+    //
+    UserDash: '/userdash',
     // 
     HomePage: '/',
     HowItWork: '/HowItWork',
+    FaqsPage: '/FaqsPage',
     SildenafilCitrate: '/SildenafilCitrate',
     TadalafilCitrate: '/TadalafilCitrate',
     //
     Quessionaire: '/quessionaire',
-    BillingQuestionnaire: '/billingquestionnaire'
+    BillingQuestionnaire: '/billingquestionnaire',
+
+    SignIn: '/signin',
+    SignUp: '/signup'
 };

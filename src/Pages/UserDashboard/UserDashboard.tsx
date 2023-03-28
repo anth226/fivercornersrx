@@ -15,6 +15,7 @@ import DashboardRoutes from '../../routes/DashboardRoutes';
 import MainNavbar from '../../Components/Navbar/MainNavbar';
 import CloseIcon from "../../assets/icons/close.png"
 import { useMediaQuery } from 'react-responsive'
+import { PATH } from '../../constants/paths';
 
 
 const UserDashboard: React.FC = () => {
@@ -58,38 +59,38 @@ const UserDashboard: React.FC = () => {
                     }
 
                     <p className={styles.sidebarHead}>MANAGE PROFILE</p>
-                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/">
-                        <div className={checkPath("/") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to={PATH.EditProfile}>
+                        <div className={checkPath(PATH.EditProfile) ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <ProfileIcon />
                             <p>Edit Profile</p>
                         </div>
                     </Link>
-                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/treatmentplan">
-                        <div className={checkPath("/treatmentplan") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to={PATH.TreatmentPlan}>
+                        <div className={checkPath(PATH.TreatmentPlan) ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <TreatementPlanIcon />
                             <p>Treatement Plan</p>
                         </div>
                     </Link>
-                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/mycase">
-                        <div className={checkPath("/mycase") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to={PATH.MyCase}>
+                        <div className={checkPath(PATH.MyCase) ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <MyCaseIcon />
                             <p>My Case</p>
                         </div>
                     </Link>
-                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/orderhistory">
-                        <div className={checkPath("/orderhistory") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to={PATH.OrderHistory}>
+                        <div className={checkPath(PATH.OrderHistory) ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <OrderHistoryIcon />
                             <p>Order History</p>
                         </div>
                     </Link>
-                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/billingdetails">
-                        <div className={checkPath("/billingdetails") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to={PATH.BillingDetails}>
+                        <div className={checkPath(PATH.BillingDetails) ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <BillingDetailIcon />
                             <p>Billing Detail</p>
                         </div>
                     </Link>
-                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to="/security">
-                        <div className={checkPath("/security") ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
+                    <Link onClick={() => setShowSidebar(false)} style={{ textDecoration: "none" }} to={PATH.Security}>
+                        <div className={checkPath(PATH.Security) ? styles.sidebarItem + " " + styles.selectedSidebarItem : styles.sidebarItem}>
                             <SecurityIcon />
                             <p>Security</p>
                         </div>

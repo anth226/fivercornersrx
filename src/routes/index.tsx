@@ -4,8 +4,8 @@ import MainRoutes from './MainRoutes';
 const Routes = () => {
     return (
         <React.Fragment>
-            {/* <MainRoutes /> */}
-            <DashboardRoutes />
+            <MainRoutes />
+            {/* <DashboardRoutes /> */}
         </React.Fragment>
     );
 }

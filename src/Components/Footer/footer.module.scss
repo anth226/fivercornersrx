@@ -3,8 +3,8 @@
     margin-top: 10rem;
     padding: 4rem 0rem 6rem 0rem;
 
-    .footer-section {
-        .footer-left {
+    .footer_section {
+        .footer_left {
             margin-right: 20px;
 
             ul {
@@ -26,12 +26,12 @@
             }
         }
 
-        .footer-right {
+        .footer_right {
             // flex-wrap: wrap;
 
             gap: 100px;
 
-            .footer-right-inner {
+            .footer_right_inner {
                 h5 {
                     font-size: 1.5rem;
                     font-weight: 400;
@@ -52,10 +52,10 @@
     }
 }
 
-.footer-lower {
+.footer_lower {
     padding: 0rem 0rem 0rem 0rem;
 
-    .footer-lower-left {
+    .footer_lower_left {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -73,14 +73,14 @@
     .footer {
         padding: 4rem 2rem 6rem 2rem;
 
-        .footer-section {
+        .footer_section {
             flex-direction: column;
 
-            .footer-left {
+            .footer_left {
                 margin-bottom: 20px;
             }
 
-            .footer-right {
+            .footer_right {
                 flex-wrap: wrap;
             }
         }

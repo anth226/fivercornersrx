@@ -6,7 +6,7 @@
         padding-bottom: 3rem;
 
         .mainHOWITSWORK {
-            .howitswork-container {
+            .howitswork_container {
                 width: 85%;
                 margin: auto;
                 text-align: center;
@@ -36,7 +36,7 @@
         background: #ffffff;
         padding: 6rem 0rem;
 
-        .mainWorkscontainer-box {
+        .mainWorkscontainer_box {
             margin-bottom: 6rem;
 
             .freeHealthImg {
@@ -69,15 +69,15 @@
             }
         }
 
-        .mainWorkscontainer-save {
+        .mainWorkscontainer_save {
             padding-top: 6rem;
         }
 
-        .longterm-section {
+        .longterm_section {
             background: #f8fafc;
             padding: 4rem 0rem 0.1rem 0rem;
 
-            .mainWorkscontainer-reverse {
+            .mainWorkscontainer_reverse {
                 display: flex !important;
                 flex-direction: row-reverse;
                 gap: 2.5rem;
@@ -89,14 +89,14 @@
         }
     }
 
-    .chatWithUs-conatiner {
+    .chatWithUs_conatiner {
         background: #f8fafc;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 5rem 0rem;
 
-        .chatWithUs-section {
+        .chatWithUs_section {
             width: 60%;
             text-align: center;
             margin: auto;
@@ -124,13 +124,13 @@
     }
 }
 
-.width-component {
+.width_component {
     width: 80%;
     margin: auto;
 }
 
 
-.Free-Consult-link {
+.Free_Consult_link {
     background: #eb2525 !important;
     color: #ffffff !important;
     border-radius: 8px !important;
@@ -149,19 +149,19 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .howitswork-container {
+    .howitswork_container {
         width: 100% !important;
     }
 
-    .chatWithUs-conatiner {
-        .chatWithUs-section {
+    .chatWithUs_conatiner {
+        .chatWithUs_section {
             width: 90% !important;
         }
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .howitswork-container {
+    .howitswork_container {
         h1 {
             font-size: 4rem !important;
         }
@@ -173,25 +173,52 @@
 }
 
 @media only screen and (max-width: 765px) {
-    .mainWorkscontainer-box {
+    .mainWorkscontainer_box {
+        text-align: center;
         flex-direction: column;
 
         .freeHealthImg {
             width: 100% !important;
-            padding: 0rem 1rem;
+            padding: 0;
         }
 
         .freeHealthtxt {
             width: 100% !important;
+            padding: 0 !important;
+        }
+
+        .Free_Consult_link {
+            margin: 0 auto;
         }
     }
 
-    .longterm-section {
-        .mainWorkscontainer-box {
+    .longterm_section {
+        .mainWorkscontainer_box {
             flex-direction: column !important;
 
             .freeHealthtxt {
                 padding: 0rem 1rem !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .HowItsWOrkcontainer {
+        .hero_sectionHowItsWork {
+            .mainHOWITSWORK {
+                .howitswork_container {
+                    h1 {
+                        font-size: 4rem !important;
+                    }
+
+                    p {
+                        font-size: 1.5rem !important;
+                    }
+
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
             }
         }
     }

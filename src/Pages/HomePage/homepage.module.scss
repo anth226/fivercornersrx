@@ -235,6 +235,33 @@
 }
 
 
+.accordion {
+    text-align: center;
+    padding: 0rem 0rem 15rem 0rem;
+    padding-top: 4rem;
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: #0f172a;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3rem;
+        color: #52525b;
+        padding: 0rem 1rem 3rem 1rem;
+    }
+
+    .accordion_wrapper {
+        width: 60%;
+        margin: auto;
+    }
+}
+
 @media only screen and (max-width: 1267px) {
     .getReady_txt_container {
         h2 {
@@ -305,7 +332,9 @@
     .benifits_container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 0;
     }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -332,6 +361,12 @@
     .treatment_option_img_container {
         width: 100% !important;
     }
+
+    .accordion {
+        .accordion_wrapper {
+            width: 90%;
+        }
+    }
 }
 
 @media only screen and (max-width: 523px) {
@@ -339,16 +374,26 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .treatment_option_container,
+    .getReady_container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
 @media only screen and (max-width: 515px) {
     .get_treatment_container {
         h1 {
             font-size: 2.5rem;
+            padding: 0 1.5rem;
+
         }
 
         .lead {
             font-size: 1.4rem;
+            padding: 0 1.5rem;
+
         }
     }
 }

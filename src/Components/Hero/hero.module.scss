@@ -1,16 +1,14 @@
-.heroMain-container {
-
-    // border: 1px solid red;
+.heroMain_container {
     .heroflex {
         display: flex !important;
         width: 100%;
 
-        .hero-img-container {
+        .hero_img_container {
             width: 30%;
             height: auto;
             padding: 0rem !important;
 
-            .hero-img {
+            .hero_img {
                 width: 100%;
             }
         }
@@ -21,7 +19,7 @@
         }
     }
 
-    .homeHero-h1Dark {
+    .homeHero_h1Dark {
         font-family: "poppins";
         font-size: 5.5rem;
         font-weight: 600;
@@ -30,7 +28,7 @@
         margin-top: 3rem;
     }
 
-    .homeHero-h1Light {
+    .homeHero_h1Light {
         font-family: "poppins";
         font-size: 5.5rem;
         font-weight: 700;
@@ -63,7 +61,7 @@
         margin-top: 2rem;
     }
 
-    .Free-Consult-link {
+    .Free_Consult_link {
         background: #eb2525 !important;
         color: #ffffff !important;
         border-radius: 8px !important;
@@ -76,12 +74,12 @@
         justify-content: center;
         align-items: center;
 
-        .Free-Consult-rightArrow {
+        .Free_Consult_rightArrow {
             margin: 0rem .5rem 0rem .5rem;
         }
     }
 
-    .safe-text-p {
+    .safe_text_p {
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 4.5rem;
@@ -102,11 +100,11 @@
             font-size: 1.4rem;
         }
 
-        .Free-Consult-link {
+        .Free_Consult_link {
             font-size: 1.2rem;
         }
 
-        .safe-text-p {
+        .safe_text_p {
             font-size: 1.4rem;
         }
     }
@@ -124,7 +122,7 @@
             font-size: 1.2rem;
         }
 
-        .safe-text-p {
+        .safe_text_p {
             font-size: 1.2rem;
         }
     }
@@ -132,29 +130,42 @@
 
 
 @media only screen and (max-width: 620px) {
+    .heroMain_container {
+        .heroflex {
+            margin: 0 auto;
 
-    .heroflex {
-        text-align: center;
-        flex-direction: column;
+            .txt {
+                .heroDiv {
 
-        .hero-img-container {
-            width: 100% !important;
-        }
+                    h1,
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
 
-        .txt {
-            width: 100% !important;
-        }
-
-        .homeHero-h1 {
             text-align: center;
-        }
+            flex-direction: column;
 
-        .lead {
-            text-align: center;
-        }
+            .hero_img_container {
+                width: 100% !important;
+            }
 
-        .Free-Consult-link {
-            margin: auto;
+            .txt {
+                width: 100% !important;
+            }
+
+            .homeHero-h1 {
+                text-align: center;
+            }
+
+            .lead {
+                text-align: center;
+            }
+
+            .Free_Consult_link {
+                margin: auto;
+            }
         }
     }
 }

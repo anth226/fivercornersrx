@@ -13,7 +13,6 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-
         align-items: center;
 
         .contentSeperator {
@@ -33,4 +32,27 @@
             width: 25%;
         }
     }
+}
+
+
+
+@media only screen and (max-width: 575px) {
+    .contentRow {
+        flex-direction: column;
+
+        div {
+            width: 100%;
+        }
+
+        .emptySide {
+            display: none;
+        }
+
+        .radioBtn {
+            width: auto;
+            margin: 0 auto;
+        }
+
+    }
+
 }
