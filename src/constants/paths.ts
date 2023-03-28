@@ -5,4 +5,9 @@ export const PATH = {
     OrderHistory: '/orderhistory',
     BillingDetails: '/billingdetails',
     Security: '/security',
+    // 
+    HomePage: '/',
+    HowItWork: '/HowItWork',
+    SildenafilCitrate: '/SildenafilCitrate',
+    TadalafilCitrate: '/TadalafilCitrate'
 };

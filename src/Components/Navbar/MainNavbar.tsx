@@ -13,6 +13,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import UsernameAvatar from '../../Components/UsernameAvatar/UsernameAvatar';
+import { Link } from "react-router-dom";
 
 type Props = {
   navType: string;
@@ -24,9 +25,10 @@ const MainNavbar: React.FC<Props> = ({ navType, updateSidebar }) => {
     <Navbar bg="" expand="lg" className="navbar">
       <Container fluid className="navbar-container">
         <UsernameAvatar updateSidebar={updateSidebar} username="Wasiq Abdullah" />
-        <Navbar.Brand href="#" >
-
-          <img src={navType == "dark" ? logoLight : logoDark} alt="" />
+        <Navbar.Brand>
+          <Link style={{ textDecoration: 'none' }} to="/">
+            <img src={navType == "dark" ? logoLight : logoDark} alt="" />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" className={navType == "dark" ? "navToggleLight" : "navToggleDark"} />
         <Navbar.Collapse id="navbarScroll" className={navType == 'dark' ? "navbarScrollLight" : "navbarScrollDark"}>
@@ -35,11 +37,18 @@ const MainNavbar: React.FC<Props> = ({ navType, updateSidebar }) => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1" className="nav-links">How It Works</Nav.Link>
-            <Nav.Link href="#action2" className="nav-links">FAQs</Nav.Link>
+
+            <Nav.Link className="nav-links">
+              <Link style={{ textDecoration: 'none' }} className="nav-links" to="HowItWork">
+                How It Works
+              </Link>
+            </Nav.Link>
+
+
+            <Nav.Link className="nav-links">FAQs</Nav.Link>
           </Nav>
           <Nav className="d-flex right-menu">
-            <Nav.Link href="#action1" className={navType == 'dark' ? "nav-linksLight navPhone" : "nav-linksDark navPhone"}><img src={navType == 'dark' ? phoneLight : phoneDark} alt="" />1-800-240-7624</Nav.Link>
+            <Nav.Link className={navType == 'dark' ? "nav-linksLight navPhone" : "nav-linksDark navPhone"}><img src={navType == 'dark' ? phoneLight : phoneDark} alt="" />1-800-240-7624</Nav.Link>
             <Button variant="light" className={navType == 'dark' ? "loginBtnLight" : "loginBtnDark"}><img src={navType == 'dark' ? user : userDark} alt="" />Login</Button>
           </Nav>
         </Navbar.Collapse>
