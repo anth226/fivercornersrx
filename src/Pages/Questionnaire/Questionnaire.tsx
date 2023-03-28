@@ -11,9 +11,12 @@ import InfoStep from '../../Components/Forms/StepTwoForms/InfoStep';
 import SildenafilImage from "../../assets/images/bottle-design-Sildenafil.svg"
 import { completeAccountSteps } from '../../constants/quessionairesteps';
 import MainNavbar from '../../Components/Navbar/MainNavbar';
+import { useHistory } from 'react-router-dom';
+import { PATH } from '../../constants/paths';
 
 
 const Questionnaire: React.FC = () => {
+    const history = useHistory()
 
     const [step, setStep] = React.useState(0)
 
@@ -31,14 +34,16 @@ const Questionnaire: React.FC = () => {
         {
             primary: "Recommended Pill for ED Treatment",
             secondary: "A starting dosage of 60mg is the most common for men who are new to ED medication. Based on the information you provided, a physician will determine if this dosage is right for you, or recommend a more appropriate dosage.",
-            component: <InfoStep title="Sildenafil Citrate" description='Generic Viagra' step_no={step} setStep_no={setStep} image={SildenafilImage} />
+            component: <InfoStep clickAction={() => history.push(PATH.BillingQuestionnaire)} title="Sildenafil Citrate" description='Generic Viagra' step_no={step} setStep_no={setStep} image={SildenafilImage} />
         }
     ]
 
     return (<div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
-            <div className="navBg">
-                <MainNavbar updateSidebar={() => { }} navType="dark" />
+            <div className="navBg ">
+                <div className='container'>
+                    <MainNavbar updateSidebar={() => { }} navType="dark" />
+                </div>
             </div>
             <QuestionnaireSteps steps={completeAccountSteps} setStep={setStep} step_no={step + 1} />
             <FormHeader primary={componentsArr[step].primary} secondary={componentsArr[step].secondary} />

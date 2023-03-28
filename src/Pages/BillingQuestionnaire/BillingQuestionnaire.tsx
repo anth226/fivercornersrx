@@ -7,6 +7,8 @@ import { billingSteps } from '../../constants/quessionairesteps';
 import ShippingForm from '../../Components/CheckoutForm/ShippingForm';
 import BillingForm from '../../Components/CheckoutForm/BillingForm';
 import PaymentInformation from '../../Components/CheckoutForm/PaymentInformation';
+import MainNavbar from '../../Components/Navbar/MainNavbar';
+
 const BillingQuestionnaire: React.FC = () => {
     const [step, setStep] = React.useState(0)
 
@@ -18,15 +20,22 @@ const BillingQuestionnaire: React.FC = () => {
 
     return (<div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
-            <QuestionnaireSteps steps={billingSteps} setStep={setStep} step_no={step + 1} />
-            <div className={styles.formsContainer}>
-                <div className={styles.leftSide}>
-                    <ProductDetails />
+            <div>
+                <div className="navBg">
+                    <div className='container'>
+                        <MainNavbar updateSidebar={() => { }} navType="dark" />
+                    </div>
                 </div>
-                <div className={styles.rightSide}>
-                    {
-                        componentsArr[step]
-                    }
+                <QuestionnaireSteps steps={billingSteps} setStep={setStep} step_no={step + 1} />
+                <div className={styles.formsContainer + " container"}>
+                    <div className={styles.leftSide}>
+                        <ProductDetails />
+                    </div>
+                    <div className={styles.rightSide}>
+                        {
+                            componentsArr[step]
+                        }
+                    </div>
                 </div>
             </div>
         </div>
