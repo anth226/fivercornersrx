@@ -11,9 +11,10 @@ type Props = {
     step_no: number
     setStep_no: React.Dispatch<React.SetStateAction<number>>
     image?: string,
+    clickAction?: () => void
 }
 
-const InfoStep: React.FC<Props> = ({ step_no, setStep_no, title, description, image }) => {
+const InfoStep: React.FC<Props> = ({ clickAction, step_no, setStep_no, title, description, image }) => {
     return (<div>
         <center>
             {title && <p style={{ margin: '3px 0' }} className='primaryText'>{title}</p>}
@@ -23,7 +24,7 @@ const InfoStep: React.FC<Props> = ({ step_no, setStep_no, title, description, im
         <center><img src={image} alt="" /></center>
         <Spacer />
         <Spacer />
-        <ActionButton action={() => step_no < 2 && setStep_no(step_no + 1)} type={BtnTypes.Success} text="Next" />
+        <ActionButton action={clickAction ? clickAction : () => step_no < 2 && setStep_no(step_no + 1)} type={BtnTypes.Success} text="Next" />
     </div>);
 }
 

@@ -53,7 +53,7 @@ const HomePage = () => {
                 />
             </div>
             {/* Get Treatment Section */}
-            <div className={styles.get_treatment_container + " container" + styles.width_component}>
+            <div className={styles.get_treatment_container + " " + styles.width_component + " container"}>
                 <h1 className="text-center">Get the best treatment you need</h1>
                 <p className={styles.lead + " text-center"}>
                     Five Corners Rx provides various treatment options suitable for your
@@ -101,7 +101,7 @@ const HomePage = () => {
             </div>
             {/* Treatment Option */}
             <div className={styles.treatment_option_container}>
-                <div className={styles.treatment_option_container_flex + " " + styles.width_component + " container width_component d-flex"}>
+                <div className={styles.treatment_option_container_flex + " " + styles.width_component + " container d-flex"}>
                     <div className={styles.treatment_option_text_container}>
                         <h2>
                             Which Treatment Option
@@ -133,7 +133,7 @@ const HomePage = () => {
             {/* FAQS */}
             {/* Get Ready */}
             <div className={styles.getReady_container}>
-                <div className={styles.getReady_section + " container" + styles.width_component}>
+                <div className={styles.getReady_section + " container" + " " + styles.width_component}>
                     <div className={styles.getReady_img_container}>
                         <div className={styles.getReady_img_box}>
                             <img

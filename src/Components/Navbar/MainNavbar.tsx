@@ -14,6 +14,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import UsernameAvatar from '../../Components/UsernameAvatar/UsernameAvatar';
 import { Link } from "react-router-dom";
+import { PATH } from "../../constants/paths";
 
 type Props = {
   navType: string;
@@ -49,7 +50,9 @@ const MainNavbar: React.FC<Props> = ({ navType, updateSidebar }) => {
           </Nav>
           <Nav className="d-flex right-menu">
             <Nav.Link className={navType == 'dark' ? "nav-linksLight navPhone" : "nav-linksDark navPhone"}><img src={navType == 'dark' ? phoneLight : phoneDark} alt="" />1-800-240-7624</Nav.Link>
-            <Button variant="light" className={navType == 'dark' ? "loginBtnLight" : "loginBtnDark"}><img src={navType == 'dark' ? user : userDark} alt="" />Login</Button>
+            <Link to={PATH.Quessionaire}>
+              <Button variant="light" className={navType == 'dark' ? "loginBtnLight" : "loginBtnDark"}><img src={navType == 'dark' ? user : userDark} alt="" />Login</Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -9,5 +9,8 @@ export const PATH = {
     HomePage: '/',
     HowItWork: '/HowItWork',
     SildenafilCitrate: '/SildenafilCitrate',
-    TadalafilCitrate: '/TadalafilCitrate'
+    TadalafilCitrate: '/TadalafilCitrate',
+    //
+    Quessionaire: '/quessionaire',
+    BillingQuestionnaire: '/billingquestionnaire'
 };
