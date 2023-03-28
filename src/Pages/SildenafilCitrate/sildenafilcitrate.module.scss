@@ -63,7 +63,7 @@
 .benifitsBG {
     background-color: #F9FAFD;
 
-    .benifits-container {
+    .benifits_container {
         display: flex;
         justify-content: space-between;
 
@@ -76,7 +76,7 @@
 
             }
 
-            .card-text {
+            .card_text {
                 font-weight: 500;
                 font-size: 1.5rem;
             }
@@ -84,31 +84,12 @@
     }
 }
 
-// .mainWorkscontainer{
-//   padding: 8rem 0rem;
-//   .freeHealthtxt{
-//     padding-left: 2.5rem;
-//         h2 {
-//           font-size: 4.4rem;
-//           font-weight: 700;
-//           color: #151b23;
-//           margin-top: 1.5rem;
-//         }
-//         p {
-//           font-size: 1.8rem;
-//           font-weight: 400;
-//           line-height: 4rem;
-//           color: #52525b;
-//           margin-top: 1.5rem;
-//           margin-bottom: 1.8rem;
-//         }
-//   }
-// }
+
 .mainWorkscontainer {
     background: #ffffff;
     padding: 6rem 0rem;
 
-    .mainWorkscontainer-box {
+    .mainWorkscontainer_box {
         margin-bottom: 6rem;
 
         .freeHealthImg {
@@ -161,14 +142,14 @@
     }
 }
 
-.Affordable-container {
+.Affordable_container {
     background: #0f172a;
     padding: 3rem 0rem;
 
-    .Affordable-section {
+    .Affordable_section {
         gap: 50px;
 
-        .Affordable-left {
+        .Affordable_left {
             h2 {
                 font-size: 4.3rem;
                 font-weight: 700;
@@ -186,7 +167,7 @@
             }
         }
 
-        .Affordable-right {
+        .Affordable_right {
             border-radius: 16px;
             background: #f8fafc;
             padding: 2.5rem 0rem;
@@ -244,7 +225,7 @@
             color: #0f172a;
         }
 
-        .OnlineServiceBox-div {
+        .OnlineServiceBox_div {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -288,13 +269,13 @@ ul {
     display: flex;
 }
 
-.width-component {
+.width_component {
     width: 80%;
     margin: auto;
 }
 
 
-.Free-Consult-link {
+.Free_Consult_link {
     background: #eb2525 !important;
     color: #ffffff !important;
     border-radius: 8px !important;
@@ -313,21 +294,21 @@ ul {
 }
 
 @media only screen and (max-width: 900px) {
-    .Affordable-right {
+    .Affordable_right {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .Affordable-section {
+    .Affordable_section {
         flex-direction: column !important;
 
-        .Affordable-left {
+        .Affordable_left {
             width: 90% !important;
         }
 
-        .Affordable-right {
+        .Affordable_right {
             width: 60% !important;
         }
     }
@@ -336,7 +317,7 @@ ul {
         background: #ffffff;
         padding: 6rem 0rem;
 
-        .mainWorkscontainer-box {
+        .mainWorkscontainer_box {
             width: 100%;
             flex-direction: column;
             padding: 0 2rem;
@@ -349,12 +330,12 @@ ul {
         }
     }
 
-    .OnlineServiceBox-div {
+    .OnlineServiceBox_div {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
     }
 
-    .benifits-container {
+    .benifits_container {
         padding: 3rem 3rem !important;
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
@@ -362,7 +343,7 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
-    .width-component {
+    .width_component {
         width: 100%;
     }
 }
@@ -370,5 +351,42 @@ ul {
 @media only screen and (max-width: 700px) {
     .OnlineServiceContainer h2 {
         font-size: 3.5rem !important;
+    }
+}
+
+
+@media only screen and (max-width: 575px) {
+    .mainWorkscontainer {
+        .mainWorkscontainer_box {
+            .freeHealthtxt {
+                text-align: center;
+
+                .Free_Consult_link {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .benifitsBG {
+        .benifits_container {
+            div {
+                margin: 0 auto;
+            }
+        }
+
+        // margin: 1rem 0;
+    }
+
+    .Affordable_container {
+        .Affordable_section {
+            .Affordable_left {
+                text-align: center;
+
+                .Free_Consult_link {
+                    margin: 0 auto;
+                }
+            }
+        }
     }
 }

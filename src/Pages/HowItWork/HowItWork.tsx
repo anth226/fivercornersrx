@@ -1,10 +1,6 @@
 import React from "react";
-// import Navbar from "../../components/Navbar/Navbar";
-// import { BrowserRouter as Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-// import Footer from "../../components/Footer/Footer";
-// import "../HomePage/HomePage.scss";
-import "./howitwork.scss";
+import styles from "./howitwork.module.scss";
 
 //image
 import icon from "../../assets/icons/Icon.svg";
@@ -17,12 +13,12 @@ import Footer from "../../Components/Footer/Footer";
 
 const HowItsWork = () => {
   return (
-    <div className="HowItsWOrkcontainer">
-      <div className="hero_sectionHowItsWork">
-        <div className="container width-component mainHOWITSWORK">
+    <div className={styles.HowItsWOrkcontainer}>
+      <div className={styles.hero_sectionHowItsWork}>
+        <div className={styles.mainHOWITSWORK + " container width_component mainHOWITSWORK"}>
           {/* <Navbar /> */}
           <MainNavbar navType="dark" updateSidebar={() => { }} />
-          <div className="howitswork-container">
+          <div className={styles.howitswork_container}>
             <h1>How it works</h1>
             <p>
               Welcome to Five Corners Rx, where getting ED medication online is
@@ -38,12 +34,12 @@ const HowItsWork = () => {
         </div>
       </div>
       {/* Proper Work Telling section */}
-      <div className="mainWorkscontainer">
-        <div className="mainWorkscontainer-box width-component d-flex">
-          <div className="freeHealthImg">
+      <div className={styles.mainWorkscontainer}>
+        <div className={styles.mainWorkscontainer_box + " " + styles.width_component + " d-flex"}>
+          <div className={styles.freeHealthImg}>
             <img src={bg} alt="" />
           </div>
-          <div className="freeHealthtxt">
+          <div className={styles.freeHealthtxt}>
             <h2>Free Health Evaluation</h2>
             <p>
               To ensure your safety and satisfaction, we provide a free online
@@ -54,24 +50,22 @@ const HowItsWork = () => {
               shipped to your doorstep. So why wait? Start your journey towards
               overcoming ED by completing our health survey now!
             </p>
-            {/* <Link href="#"> */}
-            <Button className="Free-Consult-link">
+            <Button className={styles.Free_Consult_link}>
               Start Now Consultation
               <img
-                className="Free-Consult-rightArrow mx-3"
+                className={styles.Free_Consult_rightArrow + " mx-3"}
                 src={icon}
                 alt="arrow"
               />
             </Button>
-            {/* </Link> */}
           </div>
         </div>
-        <div className="longterm-section">
-          <div className="mainWorkscontainer-box mainWorkscontainer-reverse width-component d-flex">
-            <div className="freeHealthImg">
+        <div className={styles.longterm_section}>
+          <div className={styles.mainWorkscontainer_box + " " + styles.mainWorkscontainer_reverse + " " + styles.width_component + " d-flex"}>
+            <div className={styles.freeHealthImg}>
               <img src={bg1} alt="" />
             </div>
-            <div className="freeHealthtxt">
+            <div className={styles.freeHealthtxt}>
               <h2>Free Health Evaluation</h2>
               <p>
                 To ensure your safety and satisfaction, we provide a free online
@@ -83,10 +77,10 @@ const HowItsWork = () => {
                 towards overcoming ED by completing our health survey now!
               </p>
               {/* <Link href="#"> */}
-              <Button className="Free-Consult-link">
+              <Button className={styles.Free_Consult_link}>
                 Start Now Consultation
                 <img
-                  className="Free-Consult-rightArrow mx-3"
+                  className={styles.Free_Consult_rightArrow + " mx-3"}
                   src={icon}
                   alt="arrow"
                 />
@@ -95,11 +89,11 @@ const HowItsWork = () => {
             </div>
           </div>
         </div>
-        <div className="mainWorkscontainer-box mainWorkscontainer-save  width-component d-flex ">
-          <div className="freeHealthImg">
+        <div className={styles.mainWorkscontainer_box + " " + styles.mainWorkscontainer_save + " " + styles.width_component + " d-flex"}>
+          <div className={styles.freeHealthImg}>
             <img src={bg2} alt="" />
           </div>
-          <div className="freeHealthtxt">
+          <div className={styles.freeHealthtxt}>
             <h2>SAFE and SECURE</h2>
             <p>
               Your privacy and security are our top priorities at Five Corners
@@ -111,24 +105,22 @@ const HowItsWork = () => {
               hold you back any longer. Start your journey towards overcoming ED
               now with us.
             </p>
-            {/* <Link href="#"> */}
-            <Button className="Free-Consult-link">
+            <Button className={styles.Free_Consult_link}>
               Start Now Consultation
               <img
-                className="Free-Consult-rightArrow mx-3"
+                className={styles.Free_Consult_rightArrow + " mx-3"}
                 src={icon}
                 alt="arrow"
               />
             </Button>
-            {/* </Link> */}
           </div>
         </div>
       </div>
       {/* Proper Work Telling section */}
       {/* Chat with us */}
-      <div className="chatWithUs-conatiner">
-        <div className="chatWithUs-section">
-          <div className="d-flex justify-content-center align-items-center text-center">
+      <div className={styles.chatWithUs_conatiner}>
+        <div className={styles.chatWithUs_section}>
+          <div className={"d-flex justify-content-center align-items-center text-center"}>
             <img src={wave} alt="" />
             <h2>Chat with us!</h2>
           </div>
@@ -150,7 +142,7 @@ const HowItsWork = () => {
       </div>
       {/* Chat with us */}
       <Footer />
-    </div>
+    </div >
   );
 };
 

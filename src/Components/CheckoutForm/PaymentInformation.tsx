@@ -6,11 +6,15 @@ import "./checkoutforms.scss"
 import { Form } from "react-bootstrap";
 import ActionButton from '../ActionButton/ActionButton';
 import { BtnTypes } from '../../utils/util';
+import { useHistory } from 'react-router-dom';
 type Props = {
     step: number,
-    setStep: React.Dispatch<React.SetStateAction<number>>
+    setStep: React.Dispatch<React.SetStateAction<number>>,
 }
 const PaymentInformation: React.FC<Props> = ({ step, setStep }) => {
+
+    const history = useHistory();
+
     return (<div className="form_container">
         <h1 className="formHead">Payment Information</h1>
         <Spacer />
@@ -56,7 +60,7 @@ const PaymentInformation: React.FC<Props> = ({ step, setStep }) => {
         <div className="contentRow">
             <div className="emptySide"></div>
             <div className="btnContainer">
-                <ActionButton action={() => setStep(step + 1)} type={BtnTypes.Success} text="Next" />
+                <ActionButton action={() => { }} type={BtnTypes.Success} text="Next" />
             </div>
         </div>
     </div>);

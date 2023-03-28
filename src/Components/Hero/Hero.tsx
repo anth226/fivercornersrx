@@ -1,7 +1,7 @@
 import React from "react";
 // import { BrowserRouter as Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import "./hero.scss";
+import styles from "./hero.module.scss";
 import icon from "../../assets/icons/Icon.svg";
 import bottleDesign from "../../assets/images/bottle-design.svg";
 
@@ -15,31 +15,31 @@ type Props = {
 
 const Hero: React.FC<Props> = ({ type, primaryHead, secondaryHead, details, image }) => {
     return (
-        <div className="container heroMain-container">
-            <div className="row heroflex flex-direct display-flex justify-content-between align-items-center">
-                <div className="order-2 hero-img-container display-flex justify-content-center align-items-center">
-                    {image && <img className="hero-img" src={image} alt="medicine_image" />}
+        <div className={styles.heroMain_container + " container"}>
+            <div className={styles.heroflex + " row flex-direct display-flex justify-content-between align-items-center"}>
+                <div className={styles.hero_img_container + " order-2  display-flex justify-content-center align-items-center"}>
+                    {image && <img className={styles.hero_img} src={image} alt="medicine_image" />}
                 </div>
-                <div className="order-1 txt display-flex justify-content-right align-items-end">
-                    <div className="heroDiv ">
-                        {primaryHead && <h1 className={type == 'dark' ? "homeHero-h1Dark" : "homeHero-h1Light"}>
+                <div className={styles.txt + " order-1 display-flex justify-content-right align-items-end"}>
+                    <div className={styles.heroDiv}>
+                        {primaryHead && <h1 className={type == 'dark' ? styles.homeHero_h1Dark : styles.homeHero_h1Light}>
                             {primaryHead}
                         </h1>}
                         {secondaryHead && <h5>{secondaryHead}</h5>}
-                        {details && <p className={type == 'dark' ? "leadDark" : "leadLight"}>
+                        {details && <p className={type == 'dark' ? styles.leadDark : styles.leadLight}>
                             {details}
                         </p>}
                         {/* <Link > */}
-                        <Button className="Free-Consult-link">
+                        <Button className={styles.Free_Consult_link}>
                             Start FREE Consultation
                             <img
-                                className="Free-Consult-rightArrow"
+                                className={styles.Free_Consult_rightArrow}
                                 src={icon}
                                 alt="arrow"
                             />{" "}
                         </Button>
                         {/* </Link> */}
-                        <p className="safe-text-p">100% Safe. Verified. FDA-Approved.</p>
+                        <p className={styles.safe_text_p}>100% Safe. Verified. FDA-Approved.</p>
                     </div>
                 </div>
             </div>

@@ -30,6 +30,7 @@ $danger_btn_fill_color: #EB2525;
 .screenContainer {
     width: 100%;
     height: auto;
+    min-height: calc(100vh - 8vh);
     margin: 0;
     padding: 0;
     display: flex;
@@ -41,6 +42,7 @@ $danger_btn_fill_color: #EB2525;
         height: auto;
         margin: 0;
         max-width: 1200px;
+        padding-top: 10vh;
 
         .pageHead,
         .secondaryPageText {

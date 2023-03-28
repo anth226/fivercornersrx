@@ -13,13 +13,15 @@ import HowItsWork from './Pages/HowItWork/HowItWork';
 import SildenafilCitrate from './Pages/SildenafilCitrate/SildenafilCitrate';
 import TadalafilCitrate from './Pages/TadalafilCitrate/TadalafilCitrate';
 import MainRoutes from './routes/MainRoutes';
+import Routes from './routes';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         {/* <Routes /> */}
-        <MainRoutes />
+        {/* <MainRoutes /> */}
+        <Routes />
         {/* <TadalafilCitrate /> */}
         {/* <HomePage /> */}
         {/* <HowItsWork /> */}

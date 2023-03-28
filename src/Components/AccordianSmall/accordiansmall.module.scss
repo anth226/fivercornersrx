@@ -1,0 +1,47 @@
+.accordion_section_small {
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+    .accordion_header_small {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #EAECF0;
+        padding: 1.5rem 1rem 1rem 1rem;
+        background-color: #e6f0fc;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+
+        h4 {
+            font-size: 1.5rem;
+            color: #0F172A;
+        }
+
+        span {
+            font-size: 1rem !important;
+            font-weight: 500;
+            color: #0F172A;
+        }
+    }
+
+    .accordion_content {
+        font-size: 1.6rem;
+        text-align: left;
+        padding: 2rem 0rem;
+        color: #52525B;
+        line-height: 3rem;
+    }
+}
+
+
+@media only screen and (max-width: 543px) {
+    .accordion_header_small {
+        h4 {
+            font-size: 1.4rem !important;
+        }
+    }
+
+    .accordion_content {
+        font-size: 1.2rem;
+    }
+}

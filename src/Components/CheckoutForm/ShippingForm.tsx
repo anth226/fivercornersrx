@@ -9,7 +9,7 @@ import { BtnTypes } from '../../utils/util';
 
 type Props = {
     step: number,
-    setStep: React.Dispatch<React.SetStateAction<number>>
+    setStep: React.Dispatch<React.SetStateAction<number>>,
 }
 
 const ShippingForm: React.FC<Props> = ({ step, setStep }) => {
@@ -84,7 +84,7 @@ const ShippingForm: React.FC<Props> = ({ step, setStep }) => {
                 checked={true}
             />
             <div className="btnContainer">
-                <ActionButton action={() => setStep(step + 1)} type={BtnTypes.Success} text="Next" />
+                <ActionButton action={() => step < 2 && setStep(step + 1)} type={BtnTypes.Success} text="Next" />
             </div>
         </div>
     </div>);

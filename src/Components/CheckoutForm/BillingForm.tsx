@@ -66,7 +66,7 @@ const BillingForm: React.FC<Props> = ({ step, setStep }) => {
         <div className="contentRow">
             <div className="emptySide"></div>
             <div className="btnContainer">
-                <ActionButton action={() => setStep(step + 1)} type={BtnTypes.Success} text="Next" />
+                <ActionButton action={() => step < 2 && setStep(step + 1)} type={BtnTypes.Success} text="Next" />
             </div>
         </div>
     </div>);

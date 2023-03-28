@@ -1,6 +1,6 @@
 import React from "react";
 // import { BrowserRouter as Link } from "react-router-dom";
-import "./footer.scss";
+import styles from "./footer.module.scss";
 import logo from "../../assets/icons/logo.svg";
 import phone from "../../assets/icons/phone-icon.svg";
 import mail from "../../assets/icons/mail.svg";
@@ -9,9 +9,9 @@ import payment from "../../assets/icons/visa.jpeg";
 const Footer = () => {
     return (
         <div>
-            <footer className="footer">
-                <div className="footer-section container width-component d-flex justify-content-between">
-                    <div className="footer-left">
+            <footer className={styles.footer}>
+                <div className={styles.footer_section + " " + styles.width_component + " container d-flex justify-content-between"}>
+                    <div className={styles.footer_left}>
                         <img src={logo} alt="logo" />
                         <ul className="d-block ">
                             <li>
@@ -25,8 +25,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="footer-right d-flex justify-content-between">
-                        <div className="footer-right-inner">
+                    <div className={styles.footer_right + " d-flex justify-content-between"}>
+                        <div className={styles.footer_right_inner}>
                             <h5>Useful Links</h5>
                             <ul className="d-block">
                                 {/* <Link> */}
@@ -40,7 +40,7 @@ const Footer = () => {
                                 {/* </Link> */}
                             </ul>
                         </div>
-                        <div className="footer-right-inner">
+                        <div className={styles.footer_right_inner}>
                             <h5>Popular Treatments</h5>
                             <ul className="d-block">
                                 {/* <Link> */}
@@ -51,7 +51,7 @@ const Footer = () => {
                                 {/* </Link> */}
                             </ul>
                         </div>
-                        <div className="footer-right-inner">
+                        <div className={styles.footer_right_inner}>
                             <h5>Legal</h5>
                             <ul className="d-block">
                                 {/* <Link> */}
@@ -65,12 +65,12 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <div className="footer-lower">
-                <div className="footer-section-lower container width-component d-flex justify-content-between align-items-center">
-                    <div className="footer-lower-left ">
+            <div className={styles.footer_lower}>
+                <div className={styles.footer_section_lower + " " + styles.width_component + " container  d-flex justify-content-between align-items-center"}>
+                    <div className={styles.footer_lower_left}>
                         <p>Copyright © UltraPharmRX 2023 . All Rights Reserved</p>
                     </div>
-                    <div className="footer-lower-right">
+                    <div className={styles.footer_lower_right}>
                         <img src={payment} alt="" />
                     </div>
                 </div>

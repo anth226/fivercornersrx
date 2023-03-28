@@ -7,16 +7,16 @@
     padding: 2rem 0rem !important;
     margin: 0 !important;
 
-    .navbar-container {
+    .navbar_container {
         // padding: 3rem 0rem !important;
         display: flex;
         align-items: center;
 
-        .nav-conLight {
+        .nav_conLight {
             // padding-top: 10px !important;
             margin-left: 20px;
 
-            .nav-links {
+            .nav_links {
                 display: flex;
                 font-size: 1.3rem;
                 font-weight: 300;
@@ -24,11 +24,11 @@
             }
         }
 
-        .nav-conDark {
+        .nav_conDark {
             // padding-top: 10px;
             margin-left: 20px;
 
-            .nav-links {
+            .nav_links {
                 display: flex;
                 font-size: 1.3rem;
                 font-weight: 300;
@@ -36,9 +36,9 @@
             }
         }
 
-        .right-menu {
+        .right_menu {
 
-            .nav-linksLight {
+            .nav_linksLight {
                 font-size: 1.3rem;
                 font-weight: 300;
                 color: #ffffff;
@@ -50,7 +50,7 @@
                 }
             }
 
-            .nav-linksDark {
+            .nav_linksDark {
                 font-size: 1.3rem !important;
                 font-weight: 300;
                 color: #0F172A !important;
@@ -101,14 +101,18 @@
 @media only screen and (max-width: 992px) {
     .navToggleLight {
         color: #fafafa !important;
+        background-color: #fafafa;
     }
 
     .navbarScrollLight {
         background-color: #1f2a39 !important;
+        z-index: 1;
+
     }
 
     .navbarScrollDark {
         background-color: #fafafa !important;
+        z-index: 1;
     }
 
     #navbarScroll {
@@ -120,9 +124,10 @@
         border-bottom-right-radius: 10px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-        .nav-links {
+        .nav_links {
             font-size: 1.8rem !important;
             font-weight: 500;
+            // border: 2px solid red !important;
         }
 
         .navPhone {

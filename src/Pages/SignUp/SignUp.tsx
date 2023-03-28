@@ -4,10 +4,20 @@ import styles from "./signup.module.scss";
 import { Container, Form } from "react-bootstrap";
 import GoogleIcon from "../../assets/icons/google.svg"
 import FormHeader from '../../Components/FormHeader/FormHeader';
+import MainNavbar from '../../Components/Navbar/MainNavbar';
+import { useHistory } from 'react-router-dom';
+import { PATH } from '../../constants/paths';
 
 const SignUp: React.FC = () => {
+    const history = useHistory()
+
     return (<div className={styles.screenContainer}>
         <div className={styles.contentContainer}>
+            <div className="navBgLight">
+                <div className='container'>
+                    <MainNavbar updateSidebar={() => { }} navType="light" />
+                </div>
+            </div>
             <FormHeader primary="WELCOME TO FiveCornerRx!" secondary="No waiting rooms. No expensive doctors visits. Prescription treatments sent to your door, discreetly. This is the future of tele-medicine." />
             <div className={styles.formContainer}>
                 <InputComponent bigInput={true} type="text" placeholder="Enter your email" label="Email Address" />
@@ -26,7 +36,7 @@ const SignUp: React.FC = () => {
                 </div>
                 <button className={styles.formBtn + " " + styles.dangerBtn}>Sign Up</button>
                 <button className={styles.formBtn + " " + styles.secondaryBtn}><img src={GoogleIcon} />Continue with Google</button>
-                <p style={{ textAlign: "center" }} className={styles.primaryText}>Already have an account?  <span>Sign in</span></p>
+                <p style={{ textAlign: "center" }} className={styles.primaryText}>Already have an account?  <span onClick={() => history.push(PATH.SignIn)}>Sign in</span></p>
             </div>
         </div>
     </div>);
