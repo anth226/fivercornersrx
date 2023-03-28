@@ -1,14 +1,13 @@
 $important_font_size: 1.5rem;
 $selected_step_color: #2563EB;
 $dull_color: #E6E6E8;
+$basic_font_size: 1.2rem;
 
 .stepsContainer {
     width: 80%;
     height: auto;
-
     display: flex;
     justify-content: space-between;
-
     margin: 3rem auto;
 
     .step {
@@ -48,6 +47,37 @@ $dull_color: #E6E6E8;
 
             p {
                 color: white;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .stepsContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem auto;
+        padding: 0rem 1rem;
+
+        .step {
+            .stepNoContainer {
+                width: 3rem;
+                height: 3rem;
+
+                p {
+                    font-size: $basic_font_size;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                margin: 0;
+                padding: 0;
+                margin-left: 0.5rem;
+                line-height: 1.25;
             }
         }
     }

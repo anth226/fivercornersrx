@@ -1,10 +1,10 @@
 import Avatar from 'react-avatar';
 type Props = {
     username: string,
-    setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>
+    updateSidebar: () => void
 }
-const UsernameAvatar: React.FC<Props> = ({ username, setShowSidebar }) => {
-    return <Avatar onClick={(prevState) => setShowSidebar(true)} style={{ marginRight: "2rem", cursor: "pointer" }} size="35" round={true} name={username} />
+const UsernameAvatar: React.FC<Props> = ({ username, updateSidebar }) => {
+    return <Avatar onClick={updateSidebar} style={{ marginRight: "2rem", cursor: "pointer" }} size="35" round={true} name={username} />
 }
 
 export default UsernameAvatar

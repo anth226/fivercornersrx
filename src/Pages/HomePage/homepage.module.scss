@@ -1,0 +1,359 @@
+.hero_section {
+    position: relative;
+    height: 87% !important;
+    // border: 1px solid red;
+    width: 100%;
+    // background: #32465e;
+    padding-bottom: 2rem;
+    background: linear-gradient(-125deg, #32465e 0%, #1f2a39 96.65%, #151b23 100%) !important;
+}
+
+.benifits_container {
+    display: flex;
+    gap: 3rem;
+}
+
+.get_treatment_container {
+    padding: 6rem 0rem 10rem 0rem;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #0f172a;
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #52525b;
+    }
+
+    .treatment_offers_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5rem;
+        padding: 0rem 1rem;
+        gap: 60px;
+
+        .treatment_offers_box {
+            width: 100%;
+            padding: 3rem 0rem 0rem 0rem;
+            border-radius: 24px;
+            background: #e6e6e8;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .offers_p1 {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #52525b;
+            }
+
+            h5 {
+                font-size: 2.5rem;
+                font-weight: 600;
+                color: #0f172a;
+            }
+
+            .offers_p2 {
+                font-size: 1.6rem;
+                font-weight: 400;
+                font-style: normal;
+                text-align: center;
+                color: #64748b;
+            }
+
+            .Free_Consult_rightArrow {
+                margin: 0rem 1rem 0rem 0.8rem;
+            }
+        }
+    }
+}
+
+.treatment_option_container {
+    padding-top: 2rem;
+    background: #e6e6e8;
+
+    .treatment_option_text_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            line-height: 5rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+            font-weight: 500;
+            line-height: 2.2rem;
+            color: #3a3a43;
+            margin-bottom: 2rem;
+        }
+
+        .FreeConsultlink {
+            width: 12rem;
+            font-size: 1.4rem;
+            text-align: center;
+            background-color: #EB2525;
+            border: none;
+
+            img {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+// FAQS
+.faqs-container {
+    width: 100%;
+    margin: auto;
+    padding: 5rem 0rem;
+}
+
+.faqs-section {
+    margin: auto;
+    width: 80%;
+
+    h1 {
+        font-size: 4.6rem;
+        font-weight: 700;
+        line-height: 7rem;
+        color: #0f172a;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+        text-align: center;
+        color: #52525b;
+    }
+}
+
+// Get Ready
+.getReady_container {
+    background: #eaeff5;
+    padding: 5rem 0rem;
+    height: 100%;
+
+    .getReady_section {
+        // border: 1px solid red;
+        display: flex;
+        gap: 3rem;
+        height: 75vh;
+
+        .getReady_img_container {
+            display: flex;
+            width: 45%;
+            border-radius: 24px;
+            background: #dbeafe;
+
+            // padding: 50px;
+            .getReady_img_box {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // position: absolute;
+                img {
+                    width: 100%;
+                }
+
+                .getReady_cialis {
+                    margin-right: 50px;
+                }
+
+                .getReady_viagra {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .getReady_txt_container {
+            width: 55%;
+
+            h2 {
+                font-size: 4.8rem;
+                font-weight: 700;
+                color: #151b23;
+                margin-top: 5rem;
+            }
+
+            h5 {
+                font-size: 3.3rem;
+                font-weight: 500;
+                line-height: 4.2rem;
+                color: #2563eb;
+                margin-top: 2rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 3.8rem;
+                color: #52525b;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+.width_component {
+    width: 80%;
+    margin: auto;
+}
+
+
+.FreeConsultlink {
+    background: #eb2525 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    border: none;
+    margin-top: 1px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1.5rem 0rem 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:focus {
+    outline: none;
+}
+
+
+@media only screen and (max-width: 1267px) {
+    .getReady_txt_container {
+        h2 {
+            font-size: 3rem !important;
+        }
+
+        h5 {
+            font-size: 2rem !important;
+        }
+
+        p {
+            font-size: 1.5rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1018px) {
+    .getReady_container {
+        height: 100% !important;
+
+        .getReady_section {
+            flex-direction: column;
+            height: 100%;
+
+            .getReady_img_container {
+                width: 100%;
+            }
+
+            .getReady_txt_container {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .treatment_option_container {
+        padding: 6rem 0rem;
+
+        .treatment_option_text_container {
+            width: 50%;
+        }
+
+        .treatment_option_img_container {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .treatment_offers_container {
+        gap: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 834px) {
+    .treatment_offers_container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media only screen and (max-width: 867px) {
+    .benifits_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .width_component {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .width_component {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 805px) {
+    .treatment_option_container_flex {
+        flex-direction: column;
+    }
+
+    .treatment_option_text_container {
+        width: 100% !important;
+    }
+
+    .treatment_option_img_container {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 523px) {
+    .benifits_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    .get_treatment_container {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .lead {
+            font-size: 1.4rem;
+        }
+    }
+}
