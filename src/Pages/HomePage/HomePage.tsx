@@ -21,14 +21,17 @@ import Sildenafil from "../../assets/images/bottle-design-Tadalafil1.svg";
 import Footer from "../../Components/Footer/Footer";
 import MainNavbar from "../../Components/Navbar/MainNavbar";
 // import Faqs from "../../components/Faqs/Faqs";
+import BottleDesign from "../../assets/images/bottle-design.svg";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
+
     return (
         <div className={styles.HomePagecontainer}>
             <div className={styles.hero_section}>
                 <div className={styles.width_component + " container"}>
                     <MainNavbar navType="dark" updateSidebar={() => { }} />
-                    <Hero />
+                    <Hero type="dark" primaryHead="Regain Control of Erectile Dysfunction" secondaryHead="" details="Obtain AUTHENTIC FDA-approved medication for ED in under 5 minutes. No face-to-face medical consultations, no medical bills, and no insurance necessary." image={BottleDesign} />
                 </div>
             </div>
             {/* Benifits Section */}
@@ -62,14 +65,18 @@ const HomePage = () => {
                         <h5>Generic Viagra</h5>
                         <p className={styles.offers_p2}>Begins at $3 per pill</p>
                         {/* <Link > */}
-                        <Button className={styles.FreeConsultlink}>
-                            Start Now
-                            <img
-                                className={styles.Free_Consult_rightArrow}
-                                src={icon}
-                                alt="arrow"
-                            />
-                        </Button>
+                        <Link style={{ textDecoration: 'none' }} to="/SildenafilCitrate">
+                            <Button className={styles.FreeConsultlink}>
+                                Start Now
+                                <img
+                                    className={styles.Free_Consult_rightArrow}
+                                    src={icon}
+                                    alt="arrow"
+                                />
+                            </Button>
+                        </Link>
+
+
                         {/* </Link> */}
                         <img src={halfBottle1} alt="" />
                     </div>
@@ -78,15 +85,16 @@ const HomePage = () => {
                         <h5>Generic Viagra</h5>
                         <p className={styles.offers_p2}>Begins at $3 per pill</p>
                         {/* <Link > */}
-                        <Button className={styles.FreeConsultlink}>
-                            Start Now{" "}
-                            <img
-                                className={styles.Free_Consult_rightArrow}
-                                src={icon}
-                                alt="arrow"
-                            />{" "}
-                        </Button>
-                        {/* </Link> */}
+                        <Link style={{ textDecoration: 'none' }} to="/TadalafilCitrate">
+                            <Button className={styles.FreeConsultlink}>
+                                Start Now{" "}
+                                <img
+                                    className={styles.Free_Consult_rightArrow}
+                                    src={icon}
+                                    alt="arrow"
+                                />{" "}
+                            </Button>
+                        </Link>
                         <img src={halfBottle1} alt="" />
                     </div>
                 </div>
