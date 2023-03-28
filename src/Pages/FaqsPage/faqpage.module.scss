@@ -30,6 +30,7 @@
     .FaqsPage_container {
 
         .FaqsPage_section {
+
             margin-top: 3rem;
 
             .a_small {
@@ -141,6 +142,22 @@
 
         .StillQuestion_container {
             width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    .FaqsPage_container {
+        // background-color: red;
+
+        .FaqsPage_section {
+            width: 90%;
+
+            .accordion {
+                width: 100%;
+            }
+
         }
     }
 }
