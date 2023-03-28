@@ -8,12 +8,14 @@ import SignIn from './Pages/SignIn/SignIn';
 import SignUp from './Pages/SignUp/SignUp';
 import Questionnaire from './Pages/Questionnaire/Questionnaire';
 import BillingQuestionnaire from './Pages/BillingQuestionnaire/BillingQuestionnaire';
+import HomePage from './Pages/HomePage/HomePage';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <UserDashboard />
+        <HomePage />
+        {/* <UserDashboard /> */}
         {/* <SignIn /> */}
         {/* <SignUp /> */}
         {/* <Questionnaire /> */}

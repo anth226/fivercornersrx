@@ -1,0 +1,136 @@
+.heroMain-container {
+
+    // border: 1px solid red;
+    .heroflex {
+        display: flex !important;
+        width: 100%;
+
+        .hero-img-container {
+            width: 30%;
+            height: auto;
+            padding: 0rem !important;
+
+            .hero-img {
+                width: 100%;
+            }
+        }
+
+        .txt {
+            width: 70%;
+            padding: 0rem !important;
+        }
+    }
+
+    .homeHero-h1 {
+        font-family: "poppins";
+        font-size: 5.5rem;
+        font-weight: 600;
+        text-align: left;
+        color: #ffffff;
+        margin-top: 3rem;
+    }
+
+    .lead {
+        font-size: 1.6rem;
+        text-align: left;
+        font-weight: 400;
+        color: #f8fafc;
+        line-height: 25px;
+        margin-top: 2rem;
+    }
+
+    .Free-Consult-link {
+        background: #eb2525 !important;
+        color: #ffffff !important;
+        border-radius: 8px !important;
+        border: none;
+        margin-top: 1px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 1rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .Free-Consult-rightArrow {
+            margin: 0rem .5rem 0rem .5rem;
+        }
+    }
+
+    .safe-text-p {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 4.5rem;
+        color: #aebacb;
+    }
+}
+
+
+//Responsiveness
+
+@media only screen and (max-width: 995px) {
+    .heroflex {
+        .homeHero-h1 {
+            font-size: 4rem;
+        }
+
+        .lead {
+            font-size: 1.4rem;
+        }
+
+        .Free-Consult-link {
+            font-size: 1.2rem;
+        }
+
+        .safe-text-p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 867px) {
+    .heroDiv {
+
+        // border: 1px solid red !important;
+        .homeHero-h1 {
+            font-size: 3.5rem;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+        }
+
+        .safe-text-p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 620px) {
+
+    .heroflex {
+        text-align: center;
+        flex-direction: column;
+
+        .hero-img-container {
+            width: 100% !important;
+        }
+
+        .txt {
+            width: 100% !important;
+        }
+
+        .homeHero-h1 {
+            text-align: center;
+        }
+
+        .lead {
+            text-align: center;
+        }
+
+        .Free-Consult-link {
+            margin: auto;
+        }
+    }
+}

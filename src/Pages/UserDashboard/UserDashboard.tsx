@@ -20,10 +20,12 @@ import { useMediaQuery } from 'react-responsive'
 const UserDashboard: React.FC = () => {
 
     const [showSidebar, setShowSidebar] = React.useState<boolean>(false)
+
     React.useEffect(() => {
         if (showSidebar) document.body.style.overflow = "hidden";
         else document.body.style.overflow = "auto";
     }, [showSidebar])
+
     const location = useLocation();
     console.log(location.pathname);
 
@@ -38,7 +40,7 @@ const UserDashboard: React.FC = () => {
     return (<div className={styles.pageContainer}>
         <div className={styles.contentContainer}>
             <div className="navBg">
-                <MainNavbar setShowSidebar={setShowSidebar} navType="dark" />
+                <MainNavbar updateSidebar={() => setShowSidebar(true)} navType="dark" />
             </div>
 
             <div className={styles.coverSection}>

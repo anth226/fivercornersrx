@@ -18,10 +18,11 @@ $danger_btn_fill_color: #EB2525;
 
     .contentContainer {
         width: 100%;
+        min-height: calc(100vh - 8vh);
         height: auto;
         margin: 0;
         max-width: 1200px;
         padding-bottom: 5rem;
-
+        margin-top: 8vh;
     }
 }

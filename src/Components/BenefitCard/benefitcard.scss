@@ -1,0 +1,25 @@
+.benifitsCard {
+    display: flex;
+    padding: 2.5rem 0rem 2.5rem 0rem;
+
+    img {
+        margin-right: 15px;
+    }
+
+    .card-body {
+        h5 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #3a3a43;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8rem;
+            text-align: left;
+            color: #52525b;
+        }
+    }
+}

@@ -16,14 +16,14 @@ import UsernameAvatar from '../../Components/UsernameAvatar/UsernameAvatar';
 
 type Props = {
   navType: string;
-  setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>;
+  updateSidebar: () => void
 }
 
-const MainNavbar: React.FC<Props> = ({ navType, setShowSidebar }) => {
+const MainNavbar: React.FC<Props> = ({ navType, updateSidebar }) => {
   return (
     <Navbar bg="" expand="lg" className="navbar">
       <Container fluid className="navbar-container">
-        <UsernameAvatar setShowSidebar={setShowSidebar} username="Wasiq Abdullah" />
+        <UsernameAvatar updateSidebar={updateSidebar} username="Wasiq Abdullah" />
         <Navbar.Brand href="#" >
 
           <img src={navType == "dark" ? logoLight : logoDark} alt="" />
