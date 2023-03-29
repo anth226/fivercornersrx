@@ -8,7 +8,8 @@ import TextArea from '../../TextArea/TextArea';
 import "./steptwoforms.scss";
 
 type Props = {
-    content: questionType
+    content: questionType;
+    setHideFormHeader: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const DisplayQuestions = (content: questionType) => {
@@ -28,8 +29,13 @@ const DisplayQuestions = (content: questionType) => {
     }
 }
 
-const StepTwo: React.FC<Props> = ({ content }) => {
+const StepTwo: React.FC<Props> = ({ content, setHideFormHeader }) => {
     console.log('content', content)
+
+    React.useEffect(() => {
+        setHideFormHeader(true)
+    }, [])
+
     return (content && <div>
         <p className="question">{content.question}</p>
         <p className="primaryText">{content.description}</p>

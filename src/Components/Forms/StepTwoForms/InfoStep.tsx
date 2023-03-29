@@ -8,13 +8,19 @@ import "./steptwoforms.scss"
 type Props = {
     title?: string,
     description?: string,
-    step_no: number
-    setStep_no: React.Dispatch<React.SetStateAction<number>>
+    step_no: number,
+    setStep_no: React.Dispatch<React.SetStateAction<number>>,
     image?: string,
-    clickAction?: () => void
+    clickAction?: () => void,
+    setHideFormHeader: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const InfoStep: React.FC<Props> = ({ clickAction, step_no, setStep_no, title, description, image }) => {
+const InfoStep: React.FC<Props> = ({ clickAction, step_no, setStep_no, title, description, image, setHideFormHeader }) => {
+
+    React.useEffect(() => {
+        setHideFormHeader(false)
+    }, [])
+
     return (<div>
         <center>
             {title && <p style={{ margin: '3px 0' }} className='primaryText'>{title}</p>}

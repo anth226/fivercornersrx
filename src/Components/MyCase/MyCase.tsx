@@ -3,6 +3,7 @@ import styles from "./mycase.module.scss"
 import SidenafilMedicine from "../../assets/images/sidenafil.svg"
 import DashboardHeader from '../DashboardHeader/DashboardHeader';
 import CircleIcon from "../../assets/icons/circle.svg"
+import { motion } from "framer-motion";
 
 const MyCase = () => {
 
@@ -69,33 +70,40 @@ const MyCase = () => {
     ]
 
     return (
-        <div>
-            <DashboardHeader heading='My Case' details='View your assessment result.' />
-            <div className={styles.myCaseContentContainer}>
-                <div className={styles.imgUploadContainer}>
-                    <p className={styles.headText}>Submit file for physician to review</p>
-                    <div className={styles.imageUploadSection}>
-                        <p className={styles.headText}>Drags and drop file here</p>
-                        <button className={styles.actionBtn}>Upload File</button>
+        <motion.main
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2 }}
+        >
+            <div>
+                <DashboardHeader heading='My Case' details='View your assessment result.' />
+                <div className={styles.myCaseContentContainer}>
+                    <div className={styles.imgUploadContainer}>
+                        <p className={styles.headText}>Submit file for physician to review</p>
+                        <div className={styles.imageUploadSection}>
+                            <p className={styles.headText}>Drags and drop file here</p>
+                            <button className={styles.actionBtn}>Upload File</button>
+                        </div>
+                    </div>
+                    <div className={styles.quessionareContainer}>
+                        {
+                            questions.map(item => (
+                                <div className={styles.questionContainer}>
+                                    <p className={styles.question}>{item.question}</p>
+                                    <div className={styles.answer}>
+                                        <img src={CircleIcon} alt="selected_icon" />
+                                        <p>{item.answer}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+
                     </div>
                 </div>
-                <div className={styles.quessionareContainer}>
-                    {
-                        questions.map(item => (
-                            <div className={styles.questionContainer}>
-                                <p className={styles.question}>{item.question}</p>
-                                <div className={styles.answer}>
-                                    <img src={CircleIcon} alt="selected_icon" />
-                                    <p>{item.answer}</p>
-                                </div>
-                            </div>
-                        ))
-                    }
 
-                </div>
             </div>
-
-        </div>
+        </motion.main>
     );
 }
 

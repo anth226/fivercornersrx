@@ -31,7 +31,7 @@ const MainRoutes = () => {
             <Route path={PATH.BillingQuestionnaire} component={BillingQuestionnaire} />
             <Route path={PATH.FaqsPage} component={FaqsPage} />
             <Route path={PATH.UserDash} component={UserDashboard} />
-        </Switch >
+        </Switch>
     </React.Suspense>);
 }
 

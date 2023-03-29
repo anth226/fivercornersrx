@@ -39,7 +39,7 @@ const Hero: React.FC<Props> = ({ type, primaryHead, secondaryHead, details, imag
                             />{" "}
                         </Button>
                         {/* </Link> */}
-                        <p className={styles.safe_text_p}>100% Safe. Verified. FDA-Approved.</p>
+                        {!secondaryHead && <p className={styles.safe_text_p}>100% Safe. Verified. FDA-Approved.</p>}
                     </div>
                 </div>
             </div>
