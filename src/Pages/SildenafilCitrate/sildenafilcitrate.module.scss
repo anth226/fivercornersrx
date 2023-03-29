@@ -64,19 +64,21 @@
     background-color: #F9FAFD;
 
     .benifits_container {
+
         display: flex;
         justify-content: space-between;
 
         div {
             margin-left: -20px;
+            // margin: 0 auto;
 
             img {
                 margin-right: 10px;
-                // min-height: 300px;
-
             }
 
+
             .card_text {
+                margin: auto 0;
                 font-weight: 500;
                 font-size: 1.5rem;
             }
@@ -225,16 +227,29 @@
             color: #0f172a;
         }
 
+
         .OnlineServiceBox_div {
+
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-top: 5rem;
-            padding: 5rem 1rem;
+            // padding: 5rem 1rem;
 
             // gap: 7.5rem;
+            .connectorImg {
+                width: 15rem;
+                object-fit: contain;
+                margin-bottom: 16rem;
+            }
+
             .OnlineServiceBox {
+                flex: 1;
+
                 img {
+                    width: 7rem;
+                    height: 7rem;
+
                     margin-bottom: 1.5rem;
                 }
 
@@ -274,6 +289,33 @@ ul {
     margin: auto;
 }
 
+.accordion {
+    text-align: center;
+    padding: 0rem 0rem 15rem 0rem;
+    padding-top: 4rem;
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: #0f172a;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3rem;
+        color: #52525b;
+        padding: 0rem 1rem 3rem 1rem;
+    }
+
+    .accordion_wrapper {
+        width: 60%;
+        margin: auto;
+    }
+}
+
 
 .Free_Consult_link {
     background: #eb2525 !important;
@@ -293,10 +335,23 @@ ul {
     outline: none;
 }
 
+@media only screen and (min-width: 1200px) {
+    .OnlineServiceBox_div {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .Affordable_right {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
+    }
+
+    .accordion {
+        .accordion_wrapper {
+            width: 90%;
+        }
     }
 }
 
@@ -333,6 +388,10 @@ ul {
     .OnlineServiceBox_div {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
+
+        .connectorImg {
+            display: none;
+        }
     }
 
     .benifits_container {
@@ -371,7 +430,7 @@ ul {
     .benifitsBG {
         .benifits_container {
             div {
-                margin: 0 auto;
+                margin: 1rem auto;
             }
         }
 

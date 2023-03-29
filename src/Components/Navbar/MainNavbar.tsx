@@ -63,15 +63,15 @@ const MainNavbar: React.FC<Props> = ({ navType, updateSidebar }) => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link className={styles.nav_links}>
-              <Link style={{ textDecoration: 'none' }} className={styles.nav_links} to={PATH.HowItWork}>
-                How It Works
-              </Link>
-            </Nav.Link>
+            {/* <Nav.Link className={styles.nav_links}> */}
+            <Link style={{ textDecoration: 'none' }} className={styles.nav_links} to={PATH.HowItWork}>
+              How It Works
+            </Link>
+            {/* </Nav.Link> */}
 
-            <Nav.Link className={styles.nav_links}>
-              <Link style={{ textDecoration: 'none' }} className={styles.nav_links} to={PATH.FaqsPage}>FAQs</Link>
-            </Nav.Link>
+            {/* <Nav.Link className={styles.nav_links}> */}
+            <Link style={{ textDecoration: 'none' }} className={styles.nav_links} to={PATH.FaqsPage}>FAQs</Link>
+            {/* </Nav.Link> */}
 
           </Nav>
           <Nav className={styles.right_menu + " d-flex"}>

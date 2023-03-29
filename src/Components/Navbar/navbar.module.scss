@@ -13,10 +13,11 @@
         align-items: center;
 
         .nav_conLight {
-            // padding-top: 10px !important;
-            margin-left: 20px;
 
+            // padding-top: 10px !important;
             .nav_links {
+                margin-left: 20px;
+                margin-top: 0.25rem;
                 display: flex;
                 font-size: 1.3rem;
                 font-weight: 300;
@@ -26,9 +27,11 @@
 
         .nav_conDark {
             // padding-top: 10px;
-            margin-left: 20px;
+
 
             .nav_links {
+                margin-left: 20px;
+                margin-top: 0.25rem;
                 display: flex;
                 font-size: 1.3rem;
                 font-weight: 300;
@@ -105,14 +108,42 @@
     }
 
     .navbarScrollLight {
+        // border: 2px solid red;
         background-color: #1f2a39 !important;
         z-index: 1;
+        padding: 1rem 0;
+
+        .nav_links {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin: 2rem 0;
+        }
+
+        .navPhone {
+            // border: 2px solid red;
+            margin-right: auto !important;
+            padding: 0;
+        }
 
     }
 
     .navbarScrollDark {
         background-color: #fafafa !important;
         z-index: 1;
+        padding: 1rem 0;
+
+        .nav_links {
+            // border: 2px solid red;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin: 2rem 0;
+        }
+
+        .navPhone {
+            // border: 2px solid red;
+            margin-right: auto !important;
+            padding: 0;
+        }
     }
 
     #navbarScroll {
@@ -130,15 +161,15 @@
             // border: 2px solid red !important;
         }
 
-        .navPhone {
-            font-weight: 500;
-            margin-left: 20px;
-        }
+        // .navPhone {
+        //     font-weight: 500;
+        //     margin-left: 20px;
+        // }
 
-        .loginBtn {
-            font-weight: 500;
-            font-size: 1.6rem !important;
-            width: 100px;
-        }
+        // .loginBtn {
+        //     font-weight: 500;
+        //     font-size: 1.6rem !important;
+        //     width: 100px;
+        // }
     }
 }
