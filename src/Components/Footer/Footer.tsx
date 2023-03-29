@@ -5,8 +5,13 @@ import logo from "../../assets/icons/logo.svg";
 import phone from "../../assets/icons/phone-icon.svg";
 import mail from "../../assets/icons/mail.svg";
 import payment from "../../assets/icons/visa.jpeg";
+import { Link, useHistory } from "react-router-dom";
+import { PATH } from "../../constants/paths";
 
 const Footer = () => {
+
+    const history = useHistory()
+
     return (
         <div>
             <footer className={styles.footer}>
@@ -32,11 +37,9 @@ const Footer = () => {
                                 {/* <Link> */}
                                 <li>About us</li>
                                 {/* </Link> */}
+                                <li onClick={() => history.push(PATH.HowItWork)}>How it works</li>
                                 {/* <Link> */}
-                                <li>How it works</li>
-                                {/* </Link> */}
-                                {/* <Link> */}
-                                <li>FAQs</li>
+                                <li onClick={() => history.push(PATH.FaqsPage)}>FAQs</li>
                                 {/* </Link> */}
                             </ul>
                         </div>
@@ -44,10 +47,10 @@ const Footer = () => {
                             <h5>Popular Treatments</h5>
                             <ul className="d-block">
                                 {/* <Link> */}
-                                <li>Sildenafil Citrate</li>
+                                <li onClick={() => history.push(PATH.SildenafilCitrate)}>Sildenafil Citrate</li>
                                 {/* </Link> */}
                                 {/* <Link> */}
-                                <li>Tadalafil Generic</li>
+                                <li onClick={() => history.push(PATH.TadalafilCitrate)}>Tadalafil Generic</li>
                                 {/* </Link> */}
                             </ul>
                         </div>

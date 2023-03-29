@@ -101,7 +101,8 @@
 
         .FreeConsultlink {
             width: 12rem;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-weight: 500;
             text-align: center;
             background-color: #EB2525;
             border: none;
@@ -356,6 +357,10 @@
 
     .treatment_option_text_container {
         width: 100% !important;
+
+        h2 {
+            font-size: 3rem !important;
+        }
     }
 
     .treatment_option_img_container {
@@ -373,12 +378,24 @@
     .benifits_container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        padding-top: 4rem;
     }
 
     .treatment_option_container,
     .getReady_container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+    }
+
+    .accordion {
+        h1 {
+            font-size: 3.5rem !important;
+        }
+    }
+
+    .FreeConsultlink {
+        font-size: 1.5rem;
+        font-weight: 500;
     }
 }
 

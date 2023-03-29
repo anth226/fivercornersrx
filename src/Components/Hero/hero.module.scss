@@ -105,7 +105,7 @@
         }
 
         .Free_Consult_link {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         .safe_text_p {
@@ -140,6 +140,9 @@
 
             .txt {
                 .heroDiv {
+                    h1 {
+                        margin-top: 4rem;
+                    }
 
                     h1,
                     p {
@@ -147,6 +150,7 @@
                     }
                 }
             }
+
 
             text-align: center;
             flex-direction: column;
@@ -159,16 +163,21 @@
                 width: 100% !important;
             }
 
-            .homeHero-h1 {
-                text-align: center;
+            .homeHero_h1Dark,
+            .homeHero_h1Light {
+                font-size: 3.5rem;
+
             }
 
-            .lead {
-                text-align: center;
+
+            .safe_text_p {
+                font-size: 1.2rem;
             }
 
             .Free_Consult_link {
                 margin: auto;
+
+                font-weight: 500;
             }
         }
     }

@@ -387,7 +387,14 @@ ul {
 
     .OnlineServiceBox_div {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+        // grid-template-columns: repeat(2, 1fr) !important;
+        // border: 2px solid red;
+        width: 70%;
+        margin: 0 auto;
+
+        .OnlineServiceBox {
+            margin: 2rem 0;
+        }
 
         .connectorImg {
             display: none;
@@ -422,12 +429,38 @@ ul {
 
                 .Free_Consult_link {
                     margin: 0 auto;
+
                 }
             }
         }
     }
 
+    .Free_Consult_link {
+        margin: 0 auto;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .HomePagecontainer {
+        .OnlineServiceContainer {
+            div {
+                h2 {
+                    font-size: 2.8rem !important;
+                }
+            }
+        }
+    }
+
+    .accordion {
+        h1 {
+            font-size: 3.5rem !important;
+        }
+    }
+
+
     .benifitsBG {
+        padding: 2rem 0;
+
         .benifits_container {
             div {
                 margin: 1rem auto;
