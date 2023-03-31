@@ -14,6 +14,7 @@ type Props = {
 
 const StepTwoSteps: React.FC<Props> = ({ setOuterStep, setHideFormHeader }) => {
     const [step, setSteps] = React.useState(0);
+
     return (<React.Fragment>
         {
             step < 1 ? <InfoStep setHideFormHeader={setHideFormHeader} title=''

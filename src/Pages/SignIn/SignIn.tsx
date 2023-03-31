@@ -10,7 +10,23 @@ import { PATH } from '../../constants/paths';
 import { motion } from "framer-motion";
 
 const SignIn: React.FC = () => {
+    const [formValidated, setFormValidated] = React.useState<boolean>(false);
+    const [email, setEmail] = React.useState<string>("");
+    const [password, setPassword] = React.useState<string>("");
+    const [rememberMe, setRememberMe] = React.useState<boolean>(false);
     const history = useHistory()
+
+    console.log('email', email)
+    console.log('password', password)
+    console.log('rememberMe', rememberMe)
+
+    React.useEffect(() => {
+        if (email.length > 5 && password.length > 5) {
+            setFormValidated(true)
+        } else {
+            setFormValidated(false)
+        }
+    }, [email, password])
 
     return (
         <motion.main
@@ -28,20 +44,22 @@ const SignIn: React.FC = () => {
                     </div>
                     <FormHeader primary="Sign in to your account" secondary="No waiting rooms. No expensive doctors visits. Sign in to access your account." />
                     <div className={styles.formContainer}>
-                        <InputComponent bigInput={true} type="text" placeholder="Enter your email" label="Email Address" />
+                        <InputComponent value={email} setValue={setEmail} bigInput={true} type="email" placeholder="Enter your email" label="Email Address" />
                         <br />
-                        <InputComponent bigInput={true} type="password" placeholder="Enter your password" label="Password" />
+                        <InputComponent value={password} setValue={setPassword} bigInput={true} type="password" placeholder="Enter your password" label="Password" />
                         <div className={styles.rowContent}>
                             <div className={styles.remebermeCheckboxContainer}>
                                 <Form.Check.Input className={styles.rememberMecheckbox}
-                                    checked={true}
-                                    onChange={() => { }}
+                                    checked={rememberMe}
+                                    onChange={() => { setRememberMe(!rememberMe) }}
                                 />
+
+
                                 <p className={styles.primaryText}>Remember me</p>
                             </div>
                             <p className={styles.primaryText + " " + styles.forgotPassText}>Forgot password?</p>
                         </div>
-                        <button onClick={() => {
+                        <button disabled={!formValidated} onClick={() => {
                             localStorage.setItem("user", "loggedIn")
                             history.push(PATH.Quessionaire)
                         }} className={styles.formBtn + " " + styles.dangerBtn}>Sign In</button>

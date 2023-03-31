@@ -40,15 +40,27 @@
 
                 ul {
                     margin-top: 1.8rem;
+                    list-style-type: none;
 
                     li {
                         font-size: 1.4rem;
                         margin-bottom: 15px;
                         color: #dee1e0;
+                        margin-left: -2rem;
                     }
                 }
             }
         }
+    }
+
+    .footerDetails {
+        text-align: center;
+        width: 80%;
+        color: #767584;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -83,6 +95,20 @@
             .footer_right {
                 flex-wrap: wrap;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer {
+        padding: 4rem 2rem 6rem 2rem;
+
+        .footerDetails {
+            width: 100%;
+            text-align: left;
+            text-align: left;
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
     }
 }

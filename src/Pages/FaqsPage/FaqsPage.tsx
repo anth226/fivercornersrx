@@ -9,6 +9,7 @@ import Accordion from "../../Components/Accordian/Accordian";
 import AccordionSmall from "../../Components/AccordianSmall/AccordianSmall";
 import MainNavbar from "../../Components/Navbar/MainNavbar";
 import { motion } from "framer-motion";
+import { CONSTANTS } from "../../constants/shared";
 
 const FaqsPage = () => {
 
@@ -246,7 +247,7 @@ const FaqsPage = () => {
                         </p>
                         <p>
                             You may also reach us through our toll-free hotline{" "}
-                            <strong>1-800-240-7624,</strong>
+                            <strong>{CONSTANTS.PHONE_NUMBER},</strong>
                             <br />
                             Monday- Sunday, 9 AM to 6 PM EST.
                         </p>

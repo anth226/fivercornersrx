@@ -17,6 +17,7 @@ import { Link, useHistory } from "react-router-dom";
 import { PATH } from "../../constants/paths";
 import ProfileMenuPopUp from "../ProfileMenuPopUp/ProfileMenuPopUp";
 import { useMediaQuery } from "react-responsive";
+import { CONSTANTS } from "../../constants/shared";
 
 type Props = {
   navType: string;
@@ -75,7 +76,7 @@ const MainNavbar: React.FC<Props> = ({ navType, updateSidebar }) => {
 
           </Nav>
           <Nav className={styles.right_menu + " d-flex"}>
-            <Nav.Link className={navType == 'dark' ? styles.nav_linksLight + " " + styles.navPhone : styles.nav_linksDark + " " + styles.navPhone}><img src={navType == 'dark' ? phoneLight : phoneDark} alt="" />1-800-240-7624</Nav.Link>
+            <Nav.Link className={navType == 'dark' ? styles.nav_linksLight + " " + styles.navPhone : styles.nav_linksDark + " " + styles.navPhone}><img src={navType == 'dark' ? phoneLight : phoneDark} alt="" />{CONSTANTS.PHONE_NUMBER}</Nav.Link>
             {
               localStorage.getItem('user') === "loggedIn" ? !isSmallDevice && <UsernameAvatar updateSidebar={() => setShowProfilePopUp(!showProfilePopUp)} username="Wasiq Abdullah" /> : <Link to={PATH.SignIn}>
                 <Button variant="light" className={navType == 'dark' ? styles.loginBtnLight : styles.loginBtnDark}><img src={navType == 'dark' ? user : userDark} alt="" />Login</Button>

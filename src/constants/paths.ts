@@ -19,5 +19,8 @@ export const PATH = {
     BillingQuestionnaire: '/billingquestionnaire',
 
     SignIn: '/signin',
-    SignUp: '/signup'
+    SignUp: '/signup',
+
+    TermsAndConditions: '/termsandconditions',
+    PrivacyPolicy: '/privacypolicy'
 };

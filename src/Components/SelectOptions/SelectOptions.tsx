@@ -7,7 +7,13 @@ interface Props {
 }
 
 const SelectOptions: React.FC<Props> = ({ options }) => {
-    const [selectedOption, setSelectedOption] = React.useState<string | null>(null)
+    const [selectedOption, setSelectedOption] = React.useState<string | null>(options[0])
+    console.log('options', options[0])
+
+    React.useEffect(() => {
+        setSelectedOption(options[0])
+    }, [options])
+
     return (<div className={styles.optionsContainer}>
         {
             options.length > 0 && options.map(item => item && <div onClick={() => setSelectedOption(item)} className={selectedOption === item ? styles.option + " " + styles.selectedOption : styles.option}>

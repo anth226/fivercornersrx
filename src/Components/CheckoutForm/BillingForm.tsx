@@ -13,43 +13,67 @@ type Props = {
 }
 
 const BillingForm: React.FC<Props> = ({ step, setStep }) => {
+    const [firstName, setFirstName] = React.useState<string>("");
+    const [lastName, setLastName] = React.useState<string>("");
+    const [address, setAddress] = React.useState<string>("");
+    const [state, setState] = React.useState<string>("");
+    const [city, setCity] = React.useState<string>("");
+    const [zip, setZip] = React.useState<string>("");
+    const [formValidated, setFormValidated] = React.useState<boolean>(false);
+
+    const shippingValidation = () => {
+        if (firstName.length > 3 && lastName.length > 3 && address.length > 5 && state.length > 3 && city.length > 3 && zip.length > 3) {
+            setFormValidated(true)
+        } else {
+            setFormValidated(false)
+        }
+    }
+
+    React.useEffect(() => { shippingValidation() }, [firstName, lastName, address, state, city, zip])
+
     return (<div className="form_container">
         <h1 className="formHead">Billing Information</h1>
         <Spacer />
         <Spacer />
         <div className="contentRow">
-            <InputComponent type="text"
+            <InputComponent value={firstName}
+                setValue={setFirstName} type="text"
                 placeholder="Enter first name"
                 label="First Name"
                 bigInput={true} />
             <div className="contentSeperator"></div>
-            <InputComponent type="text"
+            <InputComponent value={lastName}
+                setValue={setLastName} type="text"
                 placeholder="Enter first name"
                 label="First Name"
                 bigInput={true} />
         </div>
         <Spacer />
         <div className="contentRow">
-            <InputComponent type="text"
+            <InputComponent value={address}
+                setValue={setAddress} type="text"
                 placeholder="Address"
                 label="Address"
                 bigInput={true} />
         </div>
         <Spacer />
         <div className="contentRow">
-            <InputComponent type="text"
+            <InputComponent value={state}
+                setValue={setState} type="text"
                 placeholder="State"
                 label="Select state"
                 bigInput={true} />
             <div className="contentSeperator"></div>
-            <InputComponent type="text"
+            <InputComponent value={city}
+                setValue={setCity} type="text"
                 placeholder="Select city"
                 label="City"
                 bigInput={true} />
         </div>
         <Spacer />
         <div className="contentRow">
-            <InputComponent type="text"
+            <InputComponent value={zip}
+                setValue={setZip} type="text"
                 placeholder="Zip code"
                 label="ZIP"
                 bigInput={true} />
@@ -63,10 +87,11 @@ const BillingForm: React.FC<Props> = ({ step, setStep }) => {
         <Spacer />
         <Spacer />
         <Spacer />
+
         <div className="contentRow">
             <div className="emptySide"></div>
             <div className="btnContainer">
-                <ActionButton action={() => step < 2 && setStep(step + 1)} type={BtnTypes.Success} text="Next" />
+                <ActionButton disabled={!formValidated} action={() => step < 2 && setStep(step + 1)} type={BtnTypes.Success} text="Next" />
             </div>
         </div>
     </div>);

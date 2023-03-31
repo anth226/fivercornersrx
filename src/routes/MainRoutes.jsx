@@ -5,6 +5,8 @@ import Loading from '../Components/Loading/Loading';
 import { PATH } from '../constants/paths';
 import FaqsPage from '../Pages/FaqsPage/FaqsPage';
 import UserDashboard from '../Pages/UserDashboard/UserDashboard';
+import TermsAndConditions from '../Pages/TermsAndConditions/TermsAndConditions';
+import PrivacyPolicy from '../Pages/PrivacyPolicy/PrivacyPolicy';
 // import SignIn from '../Pages/SignIn/SignIn';
 // import SignUp from '../Pages/SignUp/SignUp';
 const SignIn = React.lazy(() => import('../Pages/SignIn/SignIn'));
@@ -31,6 +33,8 @@ const MainRoutes = () => {
             <Route path={PATH.BillingQuestionnaire} component={BillingQuestionnaire} />
             <Route path={PATH.FaqsPage} component={FaqsPage} />
             <Route path={PATH.UserDash} component={UserDashboard} />
+            <Route path={PATH.TermsAndConditions} component={TermsAndConditions} />
+            <Route path={PATH.PrivacyPolicy} component={PrivacyPolicy} />
         </Switch>
     </React.Suspense>);
 }

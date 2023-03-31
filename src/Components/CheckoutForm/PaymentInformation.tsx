@@ -7,6 +7,8 @@ import { Form } from "react-bootstrap";
 import ActionButton from '../ActionButton/ActionButton';
 import { BtnTypes } from '../../utils/util';
 import { useHistory } from 'react-router-dom';
+import CustomDropdown from '../CustomDropdown/CustomDropdown';
+import { CONSTANTS } from '../../constants/shared';
 type Props = {
     step: number,
     setStep: React.Dispatch<React.SetStateAction<number>>,
@@ -15,10 +17,14 @@ const PaymentInformation: React.FC<Props> = ({ step, setStep }) => {
 
     const history = useHistory();
 
+    console.log(CONSTANTS.EXPIRY_YEARS)
+    console.log(CONSTANTS.MONTH_NAMES)
+
     return (<div className="form_container">
         <h1 className="formHead">Payment Information</h1>
         <Spacer />
         <Spacer />
+
         <div className="contentRow">
             <InputComponent type="text"
                 placeholder="Name on card"
@@ -39,17 +45,11 @@ const PaymentInformation: React.FC<Props> = ({ step, setStep }) => {
         </div>
         <Spacer />
         <div className="contentRow">
-            <InputComponent type="text"
-                placeholder="Select month"
-                label="Expiry Month"
-                bigInput={true} />
+            <CustomDropdown options={CONSTANTS.MONTH_NAMES} bigInput={true} label="Expiry Month" placeholder="Select month" />
             <div className="contentSeperator"></div>
-            <InputComponent type="text"
-                placeholder="Select year"
-                label="Expiry Year"
-                bigInput={true} />
+            <CustomDropdown options={CONSTANTS.EXPIRY_YEARS} bigInput={true} label="Expiry Year" placeholder="Select year" />
         </div>
-
+        {/* <CustomDropdown bigInput={true} label="OPTIONS" /> */}
         <Spacer />
         <Spacer />
         <Spacer />

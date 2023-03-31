@@ -6,10 +6,11 @@ type Props = {
     text: string;
     img?: string;
     action?: () => void
+    disabled?: boolean
 }
 
-const ActionButton: React.FC<Props> = ({ type, text, img, action }) => {
-    return (<button onClick={action} className={styles[type]}>{img && <img src={img} />}{text}</button>);
+const ActionButton: React.FC<Props> = ({ type, text, img, action, disabled }) => {
+    return (<button disabled={disabled} onClick={action} className={styles[type]}>{img && <img src={img} />}{text}</button>);
 }
 
 export default ActionButton;

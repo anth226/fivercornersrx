@@ -7,6 +7,7 @@ import mail from "../../assets/icons/mail.svg";
 import payment from "../../assets/icons/visa.jpeg";
 import { Link, useHistory } from "react-router-dom";
 import { PATH } from "../../constants/paths";
+import { CONSTANTS } from "../../constants/shared";
 
 const Footer = () => {
 
@@ -15,13 +16,18 @@ const Footer = () => {
     return (
         <div>
             <footer className={styles.footer}>
+                <p className={styles.footerDetails}>ED treatments are only available if prescribed after an online consultation with a healthcare provider. Price per dose depends on product and subscription plan purchased.
+                    UltraPharmRx is not sponsored by or affiliated with any manufacturers of the Prescription Medications identified. The Prescription Medications trademarks and logos are the property of their respective owners. UltraPharmRx is not offering advice, recommending or endorsing any specific prescription drug, pharmacy or other information. Please seek medical advice before starting, changing or terminating any medication or prescription.
+                    <br />
+                    UltraPharmRx is NOT insurance or a Medicaid/Medicare prescription drug plan. Users are obligated to pay the price presented during the checkout process.
+                </p>
                 <div className={styles.footer_section + " " + styles.width_component + " container d-flex justify-content-between"}>
                     <div className={styles.footer_left}>
                         <img src={logo} alt="logo" />
                         <ul className="d-block ">
                             <li>
                                 <img src={phone} alt="" />
-                                1-800-240-7624
+                                {CONSTANTS.PHONE_NUMBER}
                             </li>
 
                             <li>
@@ -58,10 +64,10 @@ const Footer = () => {
                             <h5>Legal</h5>
                             <ul className="d-block">
                                 {/* <Link> */}
-                                <li>Privacy Policy</li>
+                                <li onClick={() => history.push(PATH.PrivacyPolicy)}>Privacy Policy</li>
                                 {/* </Link> */}
                                 {/* <Link> */}
-                                <li>Terms & Conditions</li>
+                                <li onClick={() => history.push(PATH.TermsAndConditions)}>Terms & Conditions</li>
                                 {/* </Link> */}
                             </ul>
                         </div>
