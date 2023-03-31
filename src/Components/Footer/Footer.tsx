@@ -16,10 +16,9 @@ const Footer = () => {
     return (
         <div>
             <footer className={styles.footer}>
-                <p className={styles.footerDetails}>ED treatments are only available if prescribed after an online consultation with a healthcare provider. Price per dose depends on product and subscription plan purchased.
-                    UltraPharmRx is not sponsored by or affiliated with any manufacturers of the Prescription Medications identified. The Prescription Medications trademarks and logos are the property of their respective owners. UltraPharmRx is not offering advice, recommending or endorsing any specific prescription drug, pharmacy or other information. Please seek medical advice before starting, changing or terminating any medication or prescription.
-                    <br />
-                    UltraPharmRx is NOT insurance or a Medicaid/Medicare prescription drug plan. Users are obligated to pay the price presented during the checkout process.
+                <p className={styles.footerDetails}>
+                    <h3>Disclaimer</h3>
+                    <br />In order to obtain treatments for erectile dysfunction, an online consultation with a healthcare provider is required, and a prescription must be obtained. The cost of each dose is dependent on the specific product and subscription plan that is chosen. FiveCornersRx is not affiliated with any of the manufacturers of the Prescription Medications mentioned, and the trademarks and logos belong to their respective owners. FiveCornersRx does not offer advice, endorsements, or recommendations for any particular prescription drug, pharmacy, or other information. It is recommended to seek medical advice prior to making any changes to medication or prescription. FiveCornersRx is not an insurance provider or Medicaid/Medicare prescription drug plan. At checkout, users are responsible for paying the displayed price.
                 </p>
                 <div className={styles.footer_section + " " + styles.width_component + " container d-flex justify-content-between"}>
                     <div className={styles.footer_left}>
@@ -68,6 +67,8 @@ const Footer = () => {
                                 {/* </Link> */}
                                 {/* <Link> */}
                                 <li onClick={() => history.push(PATH.TermsAndConditions)}>Terms & Conditions</li>
+                                {/* </Link> */}
+                                <li onClick={() => history.push(PATH.ConsentToTeleHealth)}>Consent To Telehealth</li>
                                 {/* </Link> */}
                             </ul>
                         </div>

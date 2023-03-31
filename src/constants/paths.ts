@@ -22,5 +22,6 @@ export const PATH = {
     SignUp: '/signup',
 
     TermsAndConditions: '/termsandconditions',
-    PrivacyPolicy: '/privacypolicy'
+    PrivacyPolicy: '/privacypolicy',
+    ConsentToTeleHealth: '/consenttotelehealth'
 };

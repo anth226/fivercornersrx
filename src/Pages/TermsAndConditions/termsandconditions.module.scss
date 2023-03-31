@@ -13,7 +13,16 @@
             margin: 4rem 0;
         }
 
-        p {
+        ul {
+            list-style-type: decimal;
+        }
+
+        .innerPara {
+            margin-left: -20px;
+        }
+
+        p,
+        li {
             font-size: 1.2rem;
             line-height: 1.75;
             font-weight: 300;

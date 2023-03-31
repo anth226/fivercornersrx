@@ -7,6 +7,7 @@ import FaqsPage from '../Pages/FaqsPage/FaqsPage';
 import UserDashboard from '../Pages/UserDashboard/UserDashboard';
 import TermsAndConditions from '../Pages/TermsAndConditions/TermsAndConditions';
 import PrivacyPolicy from '../Pages/PrivacyPolicy/PrivacyPolicy';
+import ConsentToTeleHealth from '../Pages/ConsentToTeleHealth/ConsentToTeleHealth';
 // import SignIn from '../Pages/SignIn/SignIn';
 // import SignUp from '../Pages/SignUp/SignUp';
 const SignIn = React.lazy(() => import('../Pages/SignIn/SignIn'));
@@ -35,6 +36,7 @@ const MainRoutes = () => {
             <Route path={PATH.UserDash} component={UserDashboard} />
             <Route path={PATH.TermsAndConditions} component={TermsAndConditions} />
             <Route path={PATH.PrivacyPolicy} component={PrivacyPolicy} />
+            <Route path={PATH.ConsentToTeleHealth} component={ConsentToTeleHealth} />
         </Switch>
     </React.Suspense>);
 }
