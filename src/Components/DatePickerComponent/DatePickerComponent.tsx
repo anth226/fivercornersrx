@@ -8,12 +8,13 @@ type Props = {
     date: Date | null;
     label: string;
     bigInput?: boolean;
+    placeholder?: string;
 }
 
-const DatePickerComponent: React.FC<Props> = ({ bigInput = false, label, setDate, date }) => {
+const DatePickerComponent: React.FC<Props> = ({ bigInput = false, label, setDate, date, placeholder }) => {
     return (<div className={styles.inputContainer}>
         <p className={styles.primaryText}>{label}</p>
-        <ReactDatePicker selected={date} onChange={(date) => setDate(date)} />
+        <ReactDatePicker placeholderText={placeholder} selected={date} onChange={(date) => setDate(date)} />
     </div>);
 }
 

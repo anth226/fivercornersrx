@@ -18,3 +18,8 @@ export function is18YearsOld(dateString: any) {
     // Compare the two values to determine if the entered date is at least 18 years old
     return ageInMilliseconds >= eighteenYearsInMilliseconds;
 }
+
+export function validateEmail(email: string) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}

@@ -6,6 +6,7 @@ import "./checkoutforms.scss"
 import { Form } from "react-bootstrap";
 import ActionButton from '../ActionButton/ActionButton';
 import { BtnTypes } from '../../utils/util';
+import { useMediaQuery } from 'react-responsive';
 
 type Props = {
     step: number,
@@ -31,6 +32,12 @@ const BillingForm: React.FC<Props> = ({ step, setStep }) => {
 
     React.useEffect(() => { shippingValidation() }, [firstName, lastName, address, state, city, zip])
 
+
+    const isSmallScreen = useMediaQuery({
+        query: '(max-width: 575px)'
+    })
+
+
     return (<div className="form_container">
         <h1 className="formHead">Billing Information</h1>
         <Spacer />
@@ -41,13 +48,21 @@ const BillingForm: React.FC<Props> = ({ step, setStep }) => {
                 placeholder="Enter first name"
                 label="First Name"
                 bigInput={true} />
+            {isSmallScreen && firstName && firstName.length < 3 && <p className='errorMessage'>First name must contain min 3 characters</p>}
             <div className="contentSeperator"></div>
             <InputComponent value={lastName}
                 setValue={setLastName} type="text"
                 placeholder="Enter first name"
                 label="First Name"
                 bigInput={true} />
+            {isSmallScreen && lastName && lastName.length < 3 && <p className='errorMessage'>Last name must contain min 3 characters</p>}
         </div>
+        {!isSmallScreen && <div className="contentRow">
+            {firstName && firstName.length < 3 ? <p className='errorMessage'>First name must contain min 3 characters</p> : <div className="emptySide"></div>}
+            <div className="contentSeperator"></div>
+
+            {lastName && lastName.length < 3 && <p className='errorMessage'>Last name must contain min 3 characters</p>}
+        </div>}
         <Spacer />
         <div className="contentRow">
             <InputComponent value={address}
@@ -56,6 +71,10 @@ const BillingForm: React.FC<Props> = ({ step, setStep }) => {
                 label="Address"
                 bigInput={true} />
         </div>
+        <div className="contentRow">
+            {address && address.length < 5 ? <p className='errorMessage'>Please Enter Valid Address</p> : <div className="emptySide"></div>}
+            <div className="contentSeperator"></div>
+        </div>
         <Spacer />
         <div className="contentRow">
             <InputComponent value={state}
@@ -63,13 +82,21 @@ const BillingForm: React.FC<Props> = ({ step, setStep }) => {
                 placeholder="State"
                 label="Select state"
                 bigInput={true} />
+            {isSmallScreen && state && state.length < 3 && <p className='errorMessage'>Please Enter valid State</p>}
             <div className="contentSeperator"></div>
             <InputComponent value={city}
                 setValue={setCity} type="text"
                 placeholder="Select city"
                 label="City"
                 bigInput={true} />
+            {isSmallScreen && city && city.length < 3 && <p className='errorMessage'>Please Enter Valid City</p>}
         </div>
+        {!isSmallScreen && <div className="contentRow">
+            {state && state.length < 3 ? <p className='errorMessage'>Please Enter Valid State</p> : <div className="emptySide"></div>}
+            <div className="contentSeperator"></div>
+
+            {city && city.length < 3 && <p className='errorMessage'>Please Enter Valid City</p>}
+        </div>}
         <Spacer />
         <div className="contentRow">
             <InputComponent value={zip}
@@ -80,6 +107,7 @@ const BillingForm: React.FC<Props> = ({ step, setStep }) => {
             <div className="emptySide"></div>
             <div className="contentSeperator"></div>
         </div>
+        {zip && zip.length < 3 ? <p className='errorMessage'>Please Enter Valid Zip</p> : <div className="emptySide"></div>}
         <Spacer />
         <Spacer />
         <Spacer />

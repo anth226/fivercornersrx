@@ -8,12 +8,16 @@ import MainNavbar from '../../Components/Navbar/MainNavbar';
 import { useHistory } from 'react-router-dom';
 import { PATH } from '../../constants/paths';
 import { motion } from "framer-motion";
+import { validateEmail } from '../../utils/util';
 
 const SignIn: React.FC = () => {
     const [formValidated, setFormValidated] = React.useState<boolean>(false);
     const [email, setEmail] = React.useState<string>("");
     const [password, setPassword] = React.useState<string>("");
     const [rememberMe, setRememberMe] = React.useState<boolean>(false);
+
+    const [emailValidation, setEmailValidation] = React.useState<boolean>(false);
+    const [passwordValidation, setPasswordValidation] = React.useState<boolean>(false);
     const history = useHistory()
 
     console.log('email', email)
@@ -21,7 +25,10 @@ const SignIn: React.FC = () => {
     console.log('rememberMe', rememberMe)
 
     React.useEffect(() => {
-        if (email.length > 5 && password.length > 5) {
+        setEmailValidation(validateEmail(email))
+        setPasswordValidation(password.length >= 5)
+
+        if (passwordValidation && emailValidation) {
             setFormValidated(true)
         } else {
             setFormValidated(false)
@@ -45,8 +52,10 @@ const SignIn: React.FC = () => {
                     <FormHeader primary="Sign in to your account" secondary="No waiting rooms. No expensive doctors visits. Sign in to access your account." />
                     <div className={styles.formContainer}>
                         <InputComponent value={email} setValue={setEmail} bigInput={true} type="email" placeholder="Enter your email" label="Email Address" />
+                        {email.length > 0 && !emailValidation && <p className='errorMessage'>Please Enter Valid Email Address</p>}
                         <br />
                         <InputComponent value={password} setValue={setPassword} bigInput={true} type="password" placeholder="Enter your password" label="Password" />
+                        {password.length > 0 && !passwordValidation && <p className='errorMessage'>Password must contain min 5 characters</p>}
                         <div className={styles.rowContent}>
                             <div className={styles.remebermeCheckboxContainer}>
                                 <Form.Check.Input className={styles.rememberMecheckbox}
